@@ -1,15 +1,19 @@
-import { GlobalStyle } from "./GlobalStyle";
+import React from "react";
+import { GlobalStyle } from "../../GlobalStyle";
 import { ThemeProvider } from "styled-components";
+import { theme } from "../../theme";
 import { Normalize } from "styled-normalize";
+import MoviesBrowser from "../../features/MoviesBrowser"
 
-export const App = () => {
+function App() {
+
   return (
     <ThemeProvider theme={theme}>
       <Normalize />
       <GlobalStyle />
-      <PersonalHomepage />
+      <MoviesBrowser />
     </ThemeProvider>
   );
-};
+}
 
 export default App;
