@@ -1,9 +1,10 @@
 import React from "react";
+import { Container } from "./styled";
 
 const MovieTile = () => (
-    <p>
+    <Container>
         "lalala"
-    </p>
+    </Container>
 );
 
 export default MovieTile;
