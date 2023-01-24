@@ -7,7 +7,7 @@ export const App = () => {
     <ThemeProvider theme={theme}>
       <Normalize />
       <GlobalStyle />
-      <PersonalHomepage />
+      
     </ThemeProvider>
   );
 };
