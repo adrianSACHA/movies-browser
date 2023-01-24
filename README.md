@@ -1,5 +1,10 @@
 # Movies Browser - Group Project
 
+## Contributors:
+- Konrad Kapica(Rudolfini)
+- Radosław Bubienko(RadekBubienko)
+- Adrian Sachajdakiewicz(adrianSACHA)
+
 ![Application Image](public/moviesBrowserPreview.png)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
