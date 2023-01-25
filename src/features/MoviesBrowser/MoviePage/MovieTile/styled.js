@@ -25,6 +25,7 @@ export const Title = styled.header`
     font-size: 36px;
     line-height: 1.2;
     color: ${({theme}) => theme.colors.black};
+    margin-bottom: 24px;
 `;
 
 export const Year = styled.div`
@@ -32,4 +33,20 @@ export const Year = styled.div`
     font-size: 22px;
     line-height: 1.2;
     color: ${({theme}) => theme.colors.black};
+`;
+
+export const Tags = styled.ul`
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+    margin: 16px -8px;
+`;
+
+export const Tag = styled.li`
+    background: ${({theme}) => theme.colors.mystic};
+    padding: 8px 16px;
+    font-size: 14px;
+    margin: 8px;
+    border-radius: 5px;
 `;
