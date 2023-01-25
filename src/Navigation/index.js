@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Icon, Logo, Text, Wrapper, MenuItem, Search } from "./style";
+import { Menu, Icon, Logo, Text, Wrapper, MenuItem, Search } from "./styled";
 
 const Navigation = () => (
   <Wrapper>
