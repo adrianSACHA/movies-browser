@@ -18,5 +18,18 @@ export const Image = styled.img`
 `;
 
 export const Content = styled.div`
+`;
 
+export const Title = styled.header`
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 1.2;
+    color: ${({theme}) => theme.colors.black};
+`;
+
+export const Year = styled.div`
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    color: ${({theme}) => theme.colors.black};
 `;
