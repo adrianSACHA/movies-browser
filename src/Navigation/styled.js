@@ -8,12 +8,11 @@ export const Wrapper = styled.div`
   color: #ffffff;
   display: flex;
   justify-content: center;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   align-items: center;
 
   @media (max-width: 420px) {
     height: 142px;
-
   }
 `;
 
@@ -48,7 +47,6 @@ export const Text = styled.p`
   text-transform: capitalize;
   text-align: left;
 
-
   @media (max-width: 420px) {
     font-weight: 500;
     font-size: 13px;
@@ -66,6 +64,7 @@ export const Menu = styled.div`
   gap: 10px;
   justify-content: center;
   align-items: center;
+  margin: 12px;
 `;
 
 export const MenuItem = styled.span`
