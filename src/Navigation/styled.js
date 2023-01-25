@@ -7,11 +7,14 @@ export const Wrapper = styled.div`
   min-height: 94px;
   color: #ffffff;
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  flex-basis: 300px;
+  justify-content: center;
   align-items: center;
+  border: 1px solid white;
 
-  @media (max-width: 420px) {
+  @media (max-width: 590px) {
+    flex-wrap: nowrap;
     height: 142px;
   }
 `;
@@ -21,6 +24,7 @@ export const Logo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 17px;
+  flex: 1;
 
   @media (max-width: 420px) {
     gap: 10px;
@@ -33,8 +37,8 @@ export const Icon = styled(Video)`
   border-radius: 0px;
 
   @media (max-width: 420px) {
-    height: 10px;
-    width: 13px;
+    height: 15px;
+    width: 15px;
   }
 `;
 
@@ -65,6 +69,8 @@ export const Menu = styled.div`
   justify-content: center;
   align-items: center;
   margin: 12px;
+  width: 300px;
+  flex: 1;
 `;
 
 export const MenuItem = styled.span`
@@ -73,6 +79,9 @@ export const MenuItem = styled.span`
 min-height: 48px; */
   /* border: 1px solid white; */
   border-radius: 24px;
+  border: 1px solid #18181b;
+  max-width: 300px;
+
 
   &:hover {
     border: 1px solid white;
@@ -102,6 +111,7 @@ export const Search = styled.p`
   line-height: 150%;
   align-items: center;
   color: #7e839a;
+flex: 2;
 
   @media (max-width: 420px) {
     height: 44px;
