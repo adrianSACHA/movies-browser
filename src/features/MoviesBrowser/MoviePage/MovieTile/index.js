@@ -1,9 +1,11 @@
 import React from "react";
-import { Container } from "./styled";
+import { Container, Image, Content } from "./styled";
+import poster from "./images/poster.png"
 
 const MovieTile = () => (
     <Container>
-        "lalala"
+        <Image src={poster} alt=""/>
+        <Content />
     </Container>
 );
 
