@@ -1,5 +1,21 @@
 import React from "react";
-import { Container, Image, Content, Title, SubTitle, Tags, Tag, Description, Rating, RateBig, RateSmall, Votes } from "./styled";
+import {
+    Container,
+    Image,
+    Content,
+    Title,
+    SubTitle,
+    Tags,
+    Tag,
+    Description,
+    Rating,
+    RateBig,
+    RateSmall,
+    Votes,
+    MetaContainer,
+    MetaLabel,
+    MetaInfo
+} from "./styled";
 import poster from "./images/poster.png"
 import { ReactComponent as Star } from "./icons/Star.svg"
 
@@ -9,6 +25,14 @@ const MovieTile = () => (
         <Content>
             <Title>Mulan</Title>
             <SubTitle>2020</SubTitle>
+            <MetaContainer>
+                <MetaLabel>Production:</MetaLabel>
+                <MetaInfo>China, United States of America</MetaInfo>
+            </MetaContainer>
+            <MetaContainer>
+                <MetaLabel>Release date:</MetaLabel>
+                <MetaInfo>24.10.2020</MetaInfo>
+            </MetaContainer>
             <Tags>
                 <Tag>Action</Tag>
                 <Tag>Adventure</Tag>

@@ -32,6 +32,25 @@ export const SubTitle = styled.div`
     font-weight: 400;
     font-size: 22px;
     line-height: 1.2;
+    margin-bottom: 24px;
+    color: ${({ theme }) => theme.colors.black};
+`;
+
+export const MetaContainer = styled.div`
+    display: flex;
+`;
+
+export const MetaLabel = styled.span`
+    font-size: 18px;
+    line-height: 1.2;
+    margin-right: 10px;
+    margin-bottom: 8px;
+    color: ${({theme}) => theme.colors.stormGray};
+`;
+
+export const MetaInfo = styled.span`
+    font-size: 18px;
+    line-height: 1.2;
     color: ${({ theme }) => theme.colors.black};
 `;
 
@@ -40,7 +59,7 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
-    margin: 16px -8px;
+    margin: 8px -8px 24px -8px;
 `;
 
 export const Tag = styled.li`
