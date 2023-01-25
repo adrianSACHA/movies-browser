@@ -10,5 +10,11 @@ export const theme = {
         mineShaft: "#333333",
         woodsmoke: "#18181B",
         black: "#000000",
-    }
+    },
+
+    breakpoints: {
+        mobileMax: 767,
+        tabletVerticalMax: 991,
+        tabletHorizontalMax: 1199,
+      },
 };
