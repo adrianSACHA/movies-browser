@@ -3,19 +3,17 @@ import { ReactComponent as Video } from "./Video.svg";
 
 export const Wrapper = styled.div`
   max-width: 1368px;
-  background: #18181b;
+  background: ${({ theme }) => theme.colors.woodsmoke};
   min-height: 94px;
-  color: #ffffff;
+  color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
-  flex-basis: 300px;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid ${({ theme }) => theme.colors.white};
 
   @media (max-width: 590px) {
-    flex-wrap: nowrap;
-    height: 142px;
+    min-height: 142px;
   }
 `;
 
@@ -24,10 +22,11 @@ export const Logo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 17px;
-  flex: 1;
+  max-width: 300px;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     gap: 10px;
+    width: 110px;
   }
 `;
 
@@ -36,7 +35,7 @@ export const Icon = styled(Video)`
   width: 40px;
   border-radius: 0px;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     height: 15px;
     width: 15px;
   }
@@ -51,10 +50,10 @@ export const Text = styled.p`
   text-transform: capitalize;
   text-align: left;
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-weight: 500;
     font-size: 13px;
-    width: 95px;
+    width: fit-content;   
   }
 `;
 
@@ -69,51 +68,56 @@ export const Menu = styled.div`
   justify-content: center;
   align-items: center;
   margin: 12px;
-  width: 300px;
-  flex: 1;
+  width: 220px;
+
+  @media (max-width: 425px) {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    width: fit-content;
+  }
 `;
 
 export const MenuItem = styled.span`
   padding: 8px 24px;
-  /* width: 98px;
-min-height: 48px; */
-  /* border: 1px solid white; */
+  width: 110px;
   border-radius: 24px;
-  border: 1px solid #18181b;
+  border: 1px solid ${({ theme }) => theme.colors.woodsmoke};
   max-width: 300px;
 
-
   &:hover {
-    border: 1px solid white;
+    border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
   &:active {
-    border: 1px solid white;
+    border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
     border-radius: 29px;
+    width: fit-content;
   }
 `;
 
 export const Search = styled.p`
-  max-width: 432px;
-  min-width: 288px;
+  width: 432px;
   height: 48px;
-  background: #ffffff;
-  border: 1px solid #e4e6f0;
+  background: ${({ theme }) => theme.colors.white};
+  border: 1px solid ${({ theme }) => theme.colors.mystic};
   border-radius: 33px;
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
   align-items: center;
-  color: #7e839a;
-flex: 2;
+  color: ${({ theme }) => theme.colors.waterloo};
 
-  @media (max-width: 420px) {
+  @media (max-width: 425px) {
     height: 44px;
+    max-width: 70%;
+    position: relative;
+    bottom: 0px;
   }
 `;
