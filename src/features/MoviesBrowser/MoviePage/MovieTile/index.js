@@ -1,6 +1,6 @@
 import React from "react";
 import {
-    Container,
+    MovieTileContainer,
     Image,
     Content,
     Title,
@@ -20,7 +20,7 @@ import poster from "./images/poster.png"
 import { ReactComponent as Star } from "./icons/Star.svg"
 
 const MovieTile = () => (
-    <Container>
+    <MovieTileContainer>
         <Image src={poster} alt="" />
         <Content>
             <Title>Mulan</Title>
@@ -49,7 +49,7 @@ const MovieTile = () => (
                 Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
             </Description>
         </Content>
-    </Container>
+    </MovieTileContainer>
 );
 
 export default MovieTile;
