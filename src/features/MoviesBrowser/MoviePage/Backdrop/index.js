@@ -18,9 +18,8 @@ import { ReactComponent as Star } from "./images/Star.svg"
 const Backdrop = () => (
     <BackdropWrapper>
         <BackdropImageContainer>
-            <Pleksa src={pleksa} alt="" />
+            <Pleksa src={pleksa} alt=""/>
         </BackdropImageContainer>
-
         <BackdropInfoContainer>
             <LongTitle>Mulan long title</LongTitle>
             <Rating>
