@@ -1,5 +1,6 @@
 import React from "react";
 import {
+    BackdropImageContainer,
     BackdropImage,
     BackdropWrapper,
     Pleksa,
@@ -16,7 +17,10 @@ import { ReactComponent as Star } from "./images/Star.svg"
 
 const Backdrop = () => (
     <BackdropWrapper>
-        <Pleksa src={pleksa} alt="" />
+        <BackdropImageContainer>
+            <Pleksa src={pleksa} alt="" />
+        </BackdropImageContainer>
+
         <BackdropInfoContainer>
             <LongTitle>Mulan long title</LongTitle>
             <Rating>
@@ -26,7 +30,10 @@ const Backdrop = () => (
             </Rating>
             <Votes>335 votes</Votes>
         </BackdropInfoContainer>
-        <BackdropImage src={posterBig} alt="" />
+        <BackdropImageContainer>
+            <BackdropImage src={posterBig} alt="" />
+        </BackdropImageContainer>
+
     </BackdropWrapper>
 );
 

@@ -3,12 +3,15 @@ import styled from "styled-components"
 export const BackdropWrapper = styled.div`
 `;
 
+export const BackdropImageContainer = styled.div`
+    display: flex;
+    justify-content: center;
+`;
+
 export const BackdropImage = styled.img`  
     width: 100%;
     height: auto;
     max-width: 1368px;
-    margin: 0 276px 0 276px;
-
 `;
 
 export const Pleksa = styled.img`
@@ -48,14 +51,12 @@ export const RateSmall = styled.span`
     line-height: 1.2;
     margin-right: 12px;
     padding-bottom: 3px;
-    align-self: flex-end;
     color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Votes = styled.span`
     font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    align-self: flex-end;
+    font-size: 16px;
+    line-height: 1.2;
     color: ${({ theme }) => theme.colors.white};
 `;
