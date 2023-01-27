@@ -1,5 +1,5 @@
 import React from "react";
-import MoviePage from "./MoviePage";
+import MoviePage from "./movies/MoviePage";
 
 const MoviesBrowser = () => (
     <MoviePage />
