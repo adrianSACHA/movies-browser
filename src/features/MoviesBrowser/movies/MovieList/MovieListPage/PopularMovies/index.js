@@ -1,10 +1,13 @@
+import React from "react";
 import { MainWrapper } from "../../../../../../common/MainWrapper";
 import { Title } from "../../../../../../common/Title";
 
 const PopularMovies = () => (
-    <MainWrapper>
+    
+        <MainWrapper>
         <Title>PopularMovies</Title>
-    </MainWrapper>
+        </MainWrapper>
+    
 );
-
+ 
 export default PopularMovies;
