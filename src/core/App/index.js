@@ -1,8 +1,6 @@
 import React from "react";
 import { GlobalStyle } from "./GlobalStyle";
-import React from "react";
 import { ThemeProvider } from "styled-components";
-import { theme } from "./theme";
 import { Normalize } from "styled-normalize";
 import MoviesBrowser from "../../features/MoviesBrowser"
 import { theme } from "./theme";
@@ -14,8 +12,8 @@ function App() {
     <ThemeProvider theme={theme}>
       <Normalize />
       <GlobalStyle />
-      <MoviesBrowser />
       <Navigation />
+      <MoviesBrowser />
     </ThemeProvider>
   );
 }
