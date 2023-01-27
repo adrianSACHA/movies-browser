@@ -11,9 +11,9 @@ import {
     Votes,
     LongTitle,
 } from "./styled";
-import pleksa from "./images/pleksa.svg"
-import posterBig from "./images/poster-big.png"
-import { ReactComponent as Star } from "./images/Star.svg"
+import pleksa from "./images/pleksa.svg";
+import posterBig from "./images/poster-big.png";
+import { ReactComponent as Star } from "./images/Star.svg";
 
 const Backdrop = () => (
     <BackdropWrapper>
@@ -32,7 +32,6 @@ const Backdrop = () => (
         <BackdropImageContainer>
             <BackdropImage src={posterBig} alt="" />
         </BackdropImageContainer>
-
     </BackdropWrapper>
 );
 
