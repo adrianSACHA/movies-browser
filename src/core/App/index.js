@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import MoviesBrowser from "../../features/MoviesBrowser"
 import { theme } from "./theme";
-import Navigation from "../../Navigation";
+import Navigation from "../../common/Header/Navigation";
 
 function App() {
 
