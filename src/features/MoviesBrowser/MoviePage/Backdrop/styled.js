@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BackdropWrapper = styled.div`
-position: relative;
+    position: relative;
 `;
 
 export const BackdropImageContainer = styled.div`
@@ -18,8 +18,8 @@ export const BackdropImage = styled.img`
 
 export const Pleksa = styled.img`
     position: absolute;
-    width: 100%;
-    height: auto;
+    max-height: 770px;
+    object-fit: cover;
 `;
 
 export const BackdropInfoContainer = styled.div`
