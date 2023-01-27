@@ -3,7 +3,7 @@ import React from "react";
 import { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import { theme } from "./theme";
-import Navigation from "../../common/Navigation";
+import Navigation from "../../common/Header/Navigation";
 
 export const App = () => {
   return (
