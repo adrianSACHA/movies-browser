@@ -1,6 +1,6 @@
 import React from "react";
-import { MainWrapper } from "../../../../../../common/MainWrapper";
-import { Title } from "../../../../../../common/Title";
+import { MainWrapper } from "../../../../../common/MainWrapper";
+import { Title } from "../../../../../common/Title";
 
 const PopularMovies = () => (
     
