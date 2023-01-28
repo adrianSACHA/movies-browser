@@ -1,16 +1,19 @@
 import styled from "styled-components";
 import { ReactComponent as Video } from "./Video.svg";
 
+export const MainWrapper = styled.div`
+  background: ${({ theme }) => theme.colors.woodsmoke};
+
+`;
+
 export const Wrapper = styled.div`
   max-width: 1368px;
-  background: ${({ theme }) => theme.colors.woodsmoke};
   min-height: 94px;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.white};
 
   @media (max-width: 590px) {
     min-height: 142px;
