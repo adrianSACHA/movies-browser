@@ -18,6 +18,7 @@ export const ContainerMoviePeople = styled.ul`
     margin: auto;
     display: grid;
     list-style: none;
+    grid-gap: 24px;
 `;
 
 export const PersonTile = styled.article`
