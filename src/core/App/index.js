@@ -6,7 +6,7 @@ import { Normalize } from "styled-normalize";
 import { theme } from "./theme";
 import Navigation from "../../common/Header/Navigation";
 import { toPopularMovies, toMoviePage } from "./routes";
-import PopularMovies from "../../features/MoviesBrowser/movies/MovieList/MovieListPage/PopularMovies";
+import PopularMovies from "../../features/MoviesBrowser/movies/MovieList/PopularMovies";
 import MoviePage from "../../features/MoviesBrowser/movies/MoviePage";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path={toPopularMovies} element={<PopularMovies />} />
           <Route path={toMoviePage} element={<MoviePage />} />
-          <Route path={"*"} element={<Navigate replace to="/popularmovies" />} />
+          <Route path={"*"} element={<Navigate replace to="/movie/:id" />} />
 
         </Routes>
       </HashRouter>
