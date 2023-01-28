@@ -1,16 +1,16 @@
 import styled from "styled-components";
 import { ReactComponent as Video } from "./Video.svg";
+import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
   max-width: 1368px;
-  background: ${({ theme }) => theme.colors.woodsmoke};
+  background: ${({ theme }) => theme.colors.black};
   min-height: 94px;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.white};
 
   @media (max-width: 590px) {
     min-height: 142px;
@@ -78,11 +78,13 @@ export const Menu = styled.div`
   }
 `;
 
-export const MenuItem = styled.span`
+export const MenuItemLink = styled(NavLink)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white}; 
   padding: 8px 24px;
-  width: 110px;
+  width: 115px;
   border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.woodsmoke};
+  border: 1px solid ${({ theme }) => theme.colors.black};
   max-width: 300px;
 
   &:hover {
