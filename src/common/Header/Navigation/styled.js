@@ -2,6 +2,11 @@ import styled from "styled-components";
 import { ReactComponent as Video } from "./Video.svg";
 import { NavLink } from "react-router-dom";
 
+export const MainWrapper = styled.div`
+  background: ${({ theme }) => theme.colors.woodsmoke};
+
+`;
+
 export const Wrapper = styled.div`
   max-width: 100%;
   background: ${({ theme }) => theme.colors.black};
