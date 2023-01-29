@@ -10,6 +10,7 @@ export const theme = {
         mineShaft: "#333333",
         woodsmoke: "#18181B",
         black: "#000000",
+        blue: "#0044CC",
     },
 
     breakpoints: {
