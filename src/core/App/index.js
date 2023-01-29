@@ -5,8 +5,8 @@ import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
 import Navigation from "../../common/Header/Navigation";
 import { toPopularMovies, toMoviePage } from "./routes";
-import PopularMovies from "../../features/MoviesBrowser/movies/MovieList/PopularMovies";
-import MoviePage from "../../features/MoviesBrowser/movies/MoviePage";
+import PopularMovies from "../../features/movies/MovieList/PopularMovies";
+import MoviePage from "../../features/movies/MoviePage";
 
 function App() {
   return (
