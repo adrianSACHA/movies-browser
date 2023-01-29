@@ -5,6 +5,7 @@ import poster from "./images/poster.jpg";
 import { MoviesListWrapper, Image, MovieWrapper, LinkToMoviePage } from "./styled";
 import Description from "./Description";
 import { Rating } from "./Rating"; 
+import { getMovies } from "../../../../../common/catchApi/apiDownload";
 
 const PopularMovies = () => (
   <MainWrapper>
