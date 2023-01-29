@@ -1,39 +1,67 @@
 import styled from "styled-components";
+import posterBig from "./images/poster-big.png";
 
 export const BackdropWrapper = styled.div`
-    position: relative;
+    background-color: ${({ theme }) => theme.colors.black};
 `;
 
 export const BackdropImageContainer = styled.div`
     display: flex;
-    justify-content: center;
-`;
-
-export const BackdropImage = styled.img`  
-    width: 100%;
-    height: auto;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0 auto;
+    padding: 0 16px;
     max-width: 1368px;
-    object-fit: cover;
-`;
+    height: 796px;
+    background-image: url("${posterBig}");
+    background-size: cover;
+    background-position: center;
+    box-shadow: 
+        inset 0 0 40px rgb(0 0 0), 
+        inset 0 0 238px rgb(0 0 0), 
+        inset 0 -100px 219px 52px rgb(0 0 0);
 
-export const Pleksa = styled.img`
-    position: absolute;
-    max-height: 770px;
-    object-fit: cover;
+    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
+        max-width: 800px;
+        height: 449px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        max-width: 262px;
+        height: 148px;
+        box-shadow: 
+            inset 0 0 16px 8px rgb(0 0 0)
+            inset 0 -32px 88px 20px rgb(0 0 0);
+    }
 `;
 
 export const BackdropInfoContainer = styled.div`
-    position: absolute;
-    width: 100%;
-    margin: 538px 0 0 276px;
+    margin-bottom: 40px;
+    max-height: 200px;
+    color: ${({ theme }) => theme.colors.white};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
+        margin-bottom: 24px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        margin-bottom: 4px;
+    }
 `;
 
 export const LongTitle = styled.header`
     font-weight: 600;
     font-size: 64px;
     line-height: 1.2;
-    margin-bottom: 25px;
     color: ${({ theme }) => theme.colors.white};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
+        font-size: 40px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 24px;
+    }
 `;
 
 export const Rating = styled.div`
