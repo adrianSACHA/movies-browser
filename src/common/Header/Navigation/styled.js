@@ -3,7 +3,7 @@ import { ReactComponent as Video } from "./Video.svg";
 import { NavLink } from "react-router-dom";
 
 export const Wrapper = styled.div`
-  max-width: 1368px;
+  max-width: 100%;
   background: ${({ theme }) => theme.colors.black};
   min-height: 94px;
   color: ${({ theme }) => theme.colors.white};
