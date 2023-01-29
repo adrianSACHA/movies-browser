@@ -1,5 +1,5 @@
 import React from "react";
-import { Menu, Icon, Logo, Text, Wrapper, MenuItem, Search } from "./styled";
+import { Menu, Icon, Logo, Text, Wrapper, MenuItemLink, Search } from "./styled";
 
 const Navigation = () => (
   <Wrapper>
@@ -8,8 +8,8 @@ const Navigation = () => (
       <Text>Movies Browser</Text>
     </Logo>
     <Menu>
-      <MenuItem>Movies</MenuItem>
-      <MenuItem>People</MenuItem>
+      <MenuItemLink to={"/movie/:id"}>Movies</MenuItemLink>
+      <MenuItemLink to={"/popularmovies"}>People</MenuItemLink>
     </Menu>
     <Search />
   </Wrapper>

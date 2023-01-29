@@ -1,4 +1,4 @@
-import {createGlobalStyle} from "styled-components"
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     html {
@@ -12,6 +12,6 @@ export const GlobalStyle = createGlobalStyle`
     body {
     word-break: break-word;
     font-family: 'Poppins', sans-serif;
-    background: ${({theme}) => theme.colors.mercury};
+    background: ${({ theme }) => theme.colors.mercury};
     }
 `;

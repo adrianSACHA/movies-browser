@@ -13,9 +13,16 @@ export const theme = {
     },
 
     breakpoints: {
-        mobileMin: 320,
+        mobileMin: 467,
+        mobileMed: 524,
         mobileMax: 767,
-        tabletVerticalMax: 991,
-        tabletHorizontalMax: 1199,
+        medium: 991,
+        large: 1081,
+        desktop: 1224,
+        widest: 1440,
       },
+
+    boxShadow: "0px 4px 12px rgba(186, 199, 213, 0,5)",
+    hoverShadow: "0px 4px 12px rgba(11, 106, 194, 0.65);",
+    activeShadow: "0px 4px 12px rgba(11, 106, 194, 0.75);",
 };
