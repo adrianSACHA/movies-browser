@@ -8,7 +8,6 @@ const Navigation = () => (
       <Text>Movies Browser</Text>
     </Logo>
     <Menu>
-      <MenuItemLink to={"/movie/:id"}>Movie</MenuItemLink>
       <MenuItemLink to={"/popularmovies"}>Movies</MenuItemLink>
       <MenuItemLink to={"/people"}>People</MenuItemLink>
     </Menu>
