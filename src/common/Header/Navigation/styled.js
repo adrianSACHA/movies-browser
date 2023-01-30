@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 export const MainWrapper = styled.div`
   background: ${({ theme }) => theme.colors.black};
-
 `;
 
 export const Wrapper = styled.div`
@@ -17,7 +16,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 590px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     min-height: 142px;
   }
 `;
@@ -29,7 +28,7 @@ export const Logo = styled.div`
   gap: 17px;
   max-width: 300px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     gap: 10px;
     width: 110px;
   }
@@ -40,7 +39,7 @@ export const Icon = styled(Video)`
   width: 40px;
   border-radius: 0px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     height: 15px;
     width: 15px;
   }
@@ -55,7 +54,7 @@ export const Text = styled.p`
   text-transform: capitalize;
   text-align: left;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 500;
     font-size: 13px;
     width: fit-content;   
@@ -75,7 +74,7 @@ export const Menu = styled.div`
   margin: 12px;
   width: 220px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
@@ -101,7 +100,7 @@ export const MenuItemLink = styled(NavLink)`
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
@@ -122,7 +121,7 @@ export const Search = styled.p`
   align-items: center;
   color: ${({ theme }) => theme.colors.waterloo};
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     height: 44px;
     max-width: 70%;
     position: relative;
