@@ -1,9 +1,9 @@
 import { StyledInput, Wrapper } from "./styled";
+import React from "react";
 
-const Search = () => (
+export const Search = () => (
   <Wrapper>
-    <p>a</p>
+    <p>auto</p>
     <StyledInput />
   </Wrapper>
 );
-export default Search;
