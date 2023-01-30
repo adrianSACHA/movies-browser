@@ -26,14 +26,6 @@ export const LinkToMoviePage = styled(Link)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 100%;
   }
-    &:hover {
-        transform: scale(1.03);
-        transition: 0.5s;
-    }
-    &:active {
-        transform: scale(1.05);
-        transition: 0.5s;
-    }
 `;
 
 export const MovieWrapper = styled.div`
@@ -42,18 +34,19 @@ export const MovieWrapper = styled.div`
   background: #ffffff;
   display: grid;
   grid-template-rows: auto 1fr;
-  
+  transition: 0.5s;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
   border-radius: 5px;
 
   &:hover {
+    transform: scale(1.03);
     box-shadow: ${({ theme }) => theme.hoverShadow};
   }
 
   &:active {
     box-shadow: ${({ theme }) => theme.activeShadow};
+    transform: scale(1.05);
   }
-
 `;
 
 export const Image = styled.img`
