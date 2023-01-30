@@ -3,10 +3,10 @@ import { Wrapper } from "./styled";
 import { Search } from "./Search";
 import { Navigation } from "./Navigation";
 
-const Navigation = () => (
+const Header = () => (
   <Wrapper>
     <Navigation />
     <Search />
   </Wrapper>
 );
-export default Navigation;
+export default Header;
