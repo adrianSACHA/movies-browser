@@ -1,9 +1,11 @@
-import { StyledInput, Wrapper } from "./styled";
+import { Loop, MainSearch, StyledInput, Wrapper } from "./styled";
 import React from "react";
 
 export const Search = () => (
   <Wrapper>
-    <p>auto</p>
+    <MainSearch>
+    <Loop />
     <StyledInput />
+    </MainSearch>
   </Wrapper>
 );
