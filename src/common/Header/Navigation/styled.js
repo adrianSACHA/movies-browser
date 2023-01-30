@@ -57,7 +57,7 @@ export const Text = styled.p`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 500;
     font-size: 13px;
-    width: fit-content;   
+    width: fit-content;
   }
 `;
 
@@ -84,7 +84,7 @@ export const Menu = styled.div`
 
 export const MenuItemLink = styled(NavLink)`
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.white}; 
+  color: ${({ theme }) => theme.colors.white};
   padding: 8px 24px;
   width: 115px;
   border-radius: 24px;
@@ -106,25 +106,5 @@ export const MenuItemLink = styled(NavLink)`
     line-height: 18px;
     border-radius: 29px;
     width: fit-content;
-  }
-`;
-
-export const Search = styled.p`
-  width: 432px;
-  height: 48px;
-  background: ${({ theme }) => theme.colors.white};
-  border: 1px solid ${({ theme }) => theme.colors.mystic};
-  border-radius: 33px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.waterloo};
-
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
-    height: 44px;
-    max-width: 70%;
-    position: relative;
-    bottom: 0px;
   }
 `;
