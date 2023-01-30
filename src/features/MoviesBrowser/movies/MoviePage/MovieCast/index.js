@@ -19,6 +19,41 @@ const MovieCast = () => (
                 <PersonName>Liu</PersonName>
                 <PersonInfo>Mulan</PersonInfo>
             </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
         </ContainerMoviePeople>
         <HeaderMoviePeople>Crew</HeaderMoviePeople>
         <ContainerMoviePeople>
