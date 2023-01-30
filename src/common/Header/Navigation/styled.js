@@ -3,7 +3,7 @@ import { ReactComponent as Video } from "./Video.svg";
 import { NavLink } from "react-router-dom";
 
 export const MainWrapper = styled.div`
-  background: ${({ theme }) => theme.colors.woodsmoke};
+  background: ${({ theme }) => theme.colors.black};
 
 `;
 
@@ -91,12 +91,13 @@ export const MenuItemLink = styled(NavLink)`
   border-radius: 24px;
   border: 1px solid ${({ theme }) => theme.colors.black};
   max-width: 300px;
+  transition: 0.3s;
 
   &:hover {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  &:active {
+  &.active {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
