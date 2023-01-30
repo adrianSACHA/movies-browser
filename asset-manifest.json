@@ -1,10 +1,10 @@
 {
-  "main.js": "/movies-browser/static/js/main.0c68b531.chunk.js",
-  "main.js.map": "/movies-browser/static/js/main.0c68b531.chunk.js.map",
+  "main.js": "/movies-browser/static/js/main.dd9e6eaa.chunk.js",
+  "main.js.map": "/movies-browser/static/js/main.dd9e6eaa.chunk.js.map",
   "static/js/1.956090ea.chunk.js": "/movies-browser/static/js/1.956090ea.chunk.js",
   "static/js/1.956090ea.chunk.js.map": "/movies-browser/static/js/1.956090ea.chunk.js.map",
-  "static/js/2.e45b90e8.chunk.js": "/movies-browser/static/js/2.e45b90e8.chunk.js",
-  "static/js/2.e45b90e8.chunk.js.map": "/movies-browser/static/js/2.e45b90e8.chunk.js.map",
+  "static/js/2.00ca6820.chunk.js": "/movies-browser/static/js/2.00ca6820.chunk.js",
+  "static/js/2.00ca6820.chunk.js.map": "/movies-browser/static/js/2.00ca6820.chunk.js.map",
   "runtime~main.js": "/movies-browser/static/js/runtime~main.08d08cea.js",
   "runtime~main.js.map": "/movies-browser/static/js/runtime~main.08d08cea.js.map",
   "static/media/poster.jpg": "/movies-browser/static/media/poster.873a231f.jpg",
@@ -15,6 +15,6 @@
   "static/media/Star.01e4fcea.svg": "/movies-browser/static/media/Star.01e4fcea.svg",
   "static/media/Star.bdf3dbc7.svg": "/movies-browser/static/media/Star.bdf3dbc7.svg",
   "index.html": "/movies-browser/index.html",
-  "precache-manifest.132b092a974ff851cafb6800df3f0d86.js": "/movies-browser/precache-manifest.132b092a974ff851cafb6800df3f0d86.js",
+  "precache-manifest.5835d447791b58abf12e601a71baf46f.js": "/movies-browser/precache-manifest.5835d447791b58abf12e601a71baf46f.js",
   "service-worker.js": "/movies-browser/service-worker.js"
 }
