@@ -1,22 +1,45 @@
 import styled from "styled-components";
 
+export const TileWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    margin: 64px auto;
+`;
+
 export const MovieTileContainer = styled.div`
     max-width: 1368px;
-    margin: 64px auto;
+    margin: 16px;
     padding: 40px;
     background: ${({ theme }) => theme.colors.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     display: grid;
     grid-template-columns: auto 1fr;
     grid-gap: 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        grid-template-areas: 
+                    "a b"
+                    "b b";
+        margin: 16px;
+        padding: 16px;
+    }
 `;
 
 export const Image = styled.img`    
     width: 312px;
     height: 464px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        width: 114px;
+        height: 169px;
+    }
 `;
 
 export const Content = styled.div`
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 `;
 
 export const Title = styled.header`
@@ -25,6 +48,12 @@ export const Title = styled.header`
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.black};
     margin-bottom: 24px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 4px;
+    }
 `;
 
 export const SubTitle = styled.div`
@@ -33,6 +62,13 @@ export const SubTitle = styled.div`
     line-height: 1.2;
     margin-bottom: 24px;
     color: ${({ theme }) => theme.colors.black};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 13px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        color: ${({ theme }) => theme.colors.waterloo};
+    }
 `;
 
 export const MetaContainer = styled.div`
@@ -44,13 +80,24 @@ export const MetaLabel = styled.span`
     line-height: 1.2;
     margin-right: 10px;
     margin-bottom: 8px;
-    color: ${({theme}) => theme.colors.stormGray};
+    color: ${({ theme }) => theme.colors.stormGray};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        display: none;
+    }
 `;
 
 export const MetaInfo = styled.span`
     font-size: 18px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.black};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 12px;
+        line-height: 1.3;
+        margin-bottom: 8px;
+        padding: 0;
+    }
 `;
 
 export const Tags = styled.ul`
@@ -59,6 +106,10 @@ export const Tags = styled.ul`
     list-style: none;
     padding-left: 0;
     margin: 8px -8px 24px -8px;
+    
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        margin: 8px -8px 12px -8px;
+    }
 `;
 
 export const Tag = styled.li`
@@ -67,6 +118,11 @@ export const Tag = styled.li`
     font-size: 14px;
     margin: 8px;
     border-radius: 5px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
 `;
 
 export const Rating = styled.div`
@@ -79,6 +135,10 @@ export const RateBig = styled.span`
     font-size: 22px;
     line-height: 1.3;
     margin:0 8px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 13px;
+    }
 `;
 
 export const RateSmall = styled.span`
@@ -88,6 +148,10 @@ export const RateSmall = styled.span`
     margin-right: 12px;
     padding-bottom: 3px;
     align-self: flex-end;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        display: none;
+    }
 `;
 
 export const Votes = styled.span`
@@ -96,10 +160,21 @@ export const Votes = styled.span`
     line-height: 120%;
     padding-bottom: 3px;
     align-self: flex-end;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 13px;
+    }
 `;
 
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
     margin: 24px 0 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        font-size: 14px;
+        margin: 19px 0 0 0;
+    }
 `;
+
+export const Wrapper = styled.div``;
