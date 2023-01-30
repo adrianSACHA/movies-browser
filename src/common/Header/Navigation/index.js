@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu, Icon, Logo, Text, Wrapper, MenuItemLink } from "./styled";
 
-const Navigation = () => (
+export const Navigation = () => (
   <Wrapper>
     <Logo>
       <Icon>Icon</Icon>
@@ -13,4 +13,3 @@ const Navigation = () => (
     </Menu>
   </Wrapper>
 );
-export default Navigation;
