@@ -2,13 +2,13 @@ import styled from "styled-components";
 import { ReactComponent as Search } from "./Search.svg";
 
 export const Wrapper = styled.div`
-  width: 432px;
+  max-width: 432px;
   height: 48px;
   display: flex;
   align-items: center;
   justify-content: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     height: 44px;
     max-width: 70%;
     position: relative;
@@ -33,6 +33,12 @@ width: 24px;
 height: 24px;
 margin: 15px 0 15px 26px;
 
+@media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  width: 12px;
+  margin: 15px 0 15px 18px;
+
+  }
+
 `;
 
 export const StyledInput = styled.input`
@@ -41,8 +47,10 @@ export const StyledInput = styled.input`
   line-height: 150%;
   color: ${({ theme }) => theme.colors.waterloo};
   border: none;
+  outline: 0;
   width: 70%;
 
-   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+
   }
 `;
