@@ -5,7 +5,7 @@ export const Search = () => (
   <Wrapper>
     <MainSearch>
     <Loop />
-    <StyledInput />
+    <StyledInput placeholder="Search for movies..."/>
     </MainSearch>
   </Wrapper>
 );
