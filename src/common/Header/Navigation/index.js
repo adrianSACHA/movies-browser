@@ -1,17 +1,15 @@
 import React from "react";
-import { Menu, Icon, Logo, Text, Wrapper, MenuItem, Search } from "./styled";
+import { Menu, Icon, Logo, Text, Wrapper, MenuItemLink } from "./styled";
 
-const Navigation = () => (
+export const Navigation = () => (
   <Wrapper>
     <Logo>
       <Icon>Icon</Icon>
       <Text>Movies Browser</Text>
     </Logo>
     <Menu>
-      <MenuItem>Movies</MenuItem>
-      <MenuItem>People</MenuItem>
+      <MenuItemLink to={"/popularmovies"}>Movies</MenuItemLink>
+      <MenuItemLink to={"/people"}>People</MenuItemLink>
     </Menu>
-    <Search />
   </Wrapper>
 );
-export default Navigation;

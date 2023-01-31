@@ -1,18 +1,20 @@
 import styled from "styled-components";
 import { ReactComponent as Video } from "./Video.svg";
+import { NavLink } from "react-router-dom";
+
+
 
 export const Wrapper = styled.div`
-  max-width: 1368px;
-  background: ${({ theme }) => theme.colors.woodsmoke};
+  max-width: 100%;
+  background: ${({ theme }) => theme.colors.black};
   min-height: 94px;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${({ theme }) => theme.colors.white};
 
-  @media (max-width: 590px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     min-height: 142px;
   }
 `;
@@ -24,7 +26,7 @@ export const Logo = styled.div`
   gap: 17px;
   max-width: 300px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     gap: 10px;
     width: 110px;
   }
@@ -35,7 +37,7 @@ export const Icon = styled(Video)`
   width: 40px;
   border-radius: 0px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     height: 15px;
     width: 15px;
   }
@@ -50,10 +52,10 @@ export const Text = styled.p`
   text-transform: capitalize;
   text-align: left;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 500;
     font-size: 13px;
-    width: fit-content;   
+    width: fit-content;
   }
 `;
 
@@ -70,7 +72,7 @@ export const Menu = styled.div`
   margin: 12px;
   width: 220px;
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
@@ -78,46 +80,29 @@ export const Menu = styled.div`
   }
 `;
 
-export const MenuItem = styled.span`
+export const MenuItemLink = styled(NavLink)`
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white};
   padding: 8px 24px;
-  width: 110px;
+  width: 115px;
   border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.woodsmoke};
+  border: 1px solid ${({ theme }) => theme.colors.black};
   max-width: 300px;
+  transition: 0.3s;
 
   &:hover {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  &:active {
+  &.active {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
     border-radius: 29px;
     width: fit-content;
-  }
-`;
-
-export const Search = styled.p`
-  width: 432px;
-  height: 48px;
-  background: ${({ theme }) => theme.colors.white};
-  border: 1px solid ${({ theme }) => theme.colors.mystic};
-  border-radius: 33px;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  align-items: center;
-  color: ${({ theme }) => theme.colors.waterloo};
-
-  @media (max-width: 425px) {
-    height: 44px;
-    max-width: 70%;
-    position: relative;
-    bottom: 0px;
   }
 `;
