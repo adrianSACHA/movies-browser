@@ -1,16 +1,68 @@
 import React from "react";
-import { 
+import {
     MovieCastWrapper,
-    HeaderMovieCast,
-    ContainerMovieCast,
- } from "./styled"; 
+    HeaderMoviePeople,
+    ContainerMoviePeople,
+    PersonTile,
+    PersonName,
+    PersonInfo,
+    PersonImage,
+} from "./styled";
+import photo from "./images/Picture.png";
 
 const MovieCast = () => (
     <MovieCastWrapper>
-    <HeaderMovieCast>Cast</HeaderMovieCast>
-    <ContainerMovieCast>
-
-    </ContainerMovieCast>
+        <HeaderMoviePeople>Cast</HeaderMoviePeople>
+        <ContainerMoviePeople>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+        </ContainerMoviePeople>
+        <HeaderMoviePeople>Crew</HeaderMoviePeople>
+        <ContainerMoviePeople>
+            <PersonTile>
+                <PersonImage src={photo} alt="" />
+                <PersonName>Liu</PersonName>
+                <PersonInfo>Mulan</PersonInfo>
+            </PersonTile>
+        </ContainerMoviePeople>
     </MovieCastWrapper>
 );
 
