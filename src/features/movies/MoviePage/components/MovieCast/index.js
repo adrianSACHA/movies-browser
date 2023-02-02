@@ -1,6 +1,5 @@
 import React from "react";
 import {
-    MovieCastWrapper,
     HeaderMoviePeople,
     ContainerMoviePeople,
     PersonTile,
@@ -8,10 +7,11 @@ import {
     PersonInfo,
     PersonImage,
 } from "./styled";
+import { MainWrapper } from "../../../../../common/MainWrapper"
 import photo from "./images/Picture.png";
 
 const MovieCast = () => (
-    <MovieCastWrapper>
+    <MainWrapper>
         <HeaderMoviePeople>Cast</HeaderMoviePeople>
         <ContainerMoviePeople>
             <PersonTile>
@@ -63,7 +63,7 @@ const MovieCast = () => (
                 <PersonInfo>Mulan</PersonInfo>
             </PersonTile>
         </ContainerMoviePeople>
-    </MovieCastWrapper>
+    </MainWrapper>
 );
 
 export default MovieCast;
