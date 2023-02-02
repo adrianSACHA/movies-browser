@@ -11,7 +11,7 @@ import {
 import photo from "../../../MoviesBrowser/movies/MoviePage/MovieCast/images/Picture.png";
 
 const MovieCast = () => (
-    <MovieCastWrapper> //import main wrapper
+    <MovieCastWrapper>
         <HeaderMoviePeople>Cast</HeaderMoviePeople>
         <ContainerMoviePeople>
             <PersonTile>
