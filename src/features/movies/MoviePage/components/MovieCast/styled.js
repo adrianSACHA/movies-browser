@@ -57,8 +57,8 @@ export const PersonTile = styled.li`
 `;
 
 export const PersonImage = styled.img`    
-    width: 100%; //100%
-    height: auto; //auto
+    width: 100%;
+    height: auto;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         width: 120px;
