@@ -1,95 +1,81 @@
 import styled from "styled-components";
-import posterBig from "./images/poster-big.png";
+import { ReactComponent as Star } from "./images/Star.svg";
 
 export const BackdropWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.black};
 `;
 
-export const BackdropImageContainer = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin: 0 auto;
-    padding: 0 16px;
+export const BackdropContainer = styled.div`
+    position: relative;
     max-width: 1368px;
-    height: 796px;
-    background-image: url("${posterBig}");
-    background-size: cover;
-    background-position: center;
-    box-shadow: 
-        inset 0 0 40px rgb(0 0 0), 
-        inset 0 0 238px rgb(0 0 0), 
-        inset 0 -100px 219px 52px rgb(0 0 0);
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-end;
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-        max-width: 800px;
-        height: 449px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        max-width: 262px;
-        height: 148px;
-        box-shadow: 
-            inset 0 0 16px 8px rgb(0 0 0)
-            inset 0 -32px 88px 20px rgb(0 0 0);
+    @media (max-width: ${({ theme }) => theme.breakpoints.widest}) {
+        margin: 0 6vw;
     }
 `;
 
+export const Pleksa = styled.div`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 3vw 2.5vw ${({ theme }) => theme.colors.blakc};
+`;
+
+export const BackdropImage = styled.img`
+    width: 100%;
+    object-fit: cover;
+`;
+
 export const BackdropInfoContainer = styled.div`
-    margin-bottom: 40px;
-    max-height: 200px;
+    padding-left: 16px;
+    margin-bottom: clamp(10px, 3vw, 56px);
+    display: flex;
+    flex-direction: column;
+    position: absolute;
     color: ${({ theme }) => theme.colors.white};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-        margin-bottom: 24px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        margin-bottom: 4px;
-    }
 `;
 
 export const LongTitle = styled.header`
     font-weight: 600;
-    font-size: 64px;
-    line-height: 1.2;
-    color: ${({ theme }) => theme.colors.white};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-        font-size: 40px;
-    }
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        font-size: 24px;
-    }
+    font-size: clamp(24px, 5vw, 64px);
+    margin-bottom: clamp(8px, 2vw, 25px);
+    margin-top: 0;
 `;
 
 export const Rating = styled.div`
-    display: flex;
-    align-items: center;
-    margin-bottom: 17px;
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: repeat(4, max-content);
+    grid-gap: 17px 8px;
+    align-items: end;
+
+        @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+            margin: 0 8px 0 0;
+            grid-column-gap: 5px;
+        }
+`;
+
+export const StarIcon = styled(Star)`
+    width: clamp(16px, 3vw, 40px);
+    height: clamp(16px, 3vw, 40px);
 `;
 
 export const RateBig = styled.span`
     font-weight: 500;
-    font-size: 30px;
-    line-height: 1.3;
-    margin:0 8px;
-    color: ${({ theme }) => theme.colors.white};
+    font-size: clamp(14px, 3vw, 16px);
+    line-height: 1;
+    margin: 3px;
 `;
 
 export const RateSmall = styled.span`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.2;
-    margin-right: 12px;
-    padding-bottom: 3px;
-    color: ${({ theme }) => theme.colors.white};
+    font-size: clamp(10px, 2vw, 16px);
 `;
 
 export const Votes = styled.span`
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.2;
-    color: ${({ theme }) => theme.colors.white};
+    margin-left: 0;
+    grid-row: 2;
+    grid-column: 1 / 5;
 `;
