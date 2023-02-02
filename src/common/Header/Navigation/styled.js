@@ -2,12 +2,9 @@ import styled from "styled-components";
 import { ReactComponent as Video } from "./Video.svg";
 import { NavLink } from "react-router-dom";
 
-
-
 export const Wrapper = styled.div`
   max-width: 100%;
   background: ${({ theme }) => theme.colors.black};
-  min-height: 94px;
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +12,8 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
-    min-height: 142px;
+    margin: 0;
+    gap: 5px;
   }
 `;
 
@@ -26,9 +24,10 @@ export const Logo = styled.div`
   gap: 17px;
   max-width: 300px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     gap: 10px;
     width: 110px;
+    height: 40px;
   }
 `;
 
@@ -37,7 +36,7 @@ export const Icon = styled(Video)`
   width: 40px;
   border-radius: 0px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     height: 15px;
     width: 15px;
   }
@@ -52,7 +51,7 @@ export const Text = styled.p`
   text-transform: capitalize;
   text-align: left;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-weight: 500;
     font-size: 13px;
     width: fit-content;
@@ -72,11 +71,13 @@ export const Menu = styled.div`
   margin: 12px;
   width: 220px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
     width: fit-content;
+    margin: 0;
+    gap: 5px;
   }
 `;
 
@@ -86,19 +87,16 @@ export const MenuItemLink = styled(NavLink)`
   padding: 8px 24px;
   width: 115px;
   border-radius: 24px;
-  border: 1px solid ${({ theme }) => theme.colors.black};
+  border: 1px solid transparent;
   max-width: 300px;
   transition: 0.3s;
 
-  &:hover {
-    border: 1px solid ${({ theme }) => theme.colors.white};
-  }
-
+  &:hover,
   &.active {
     border: 1px solid ${({ theme }) => theme.colors.white};
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-weight: 600;
     font-size: 12px;
     line-height: 18px;
