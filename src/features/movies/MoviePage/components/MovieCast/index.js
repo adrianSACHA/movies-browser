@@ -8,7 +8,7 @@ import {
     PersonInfo,
     PersonImage,
 } from "./styled";
-import photo from "../../../MoviesBrowser/movies/MoviePage/MovieCast/images/Picture.png";
+import photo from "./images/Picture.png";
 
 const MovieCast = () => (
     <MovieCastWrapper>
