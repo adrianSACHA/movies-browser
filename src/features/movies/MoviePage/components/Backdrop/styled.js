@@ -65,7 +65,7 @@ export const StarIcon = styled(Star)`
 
 export const RateBig = styled.span`
     font-weight: 500;
-    font-size: clamp(14px, 3vw, 16px);
+    font-size: clamp(14px, 3vw, 24px);
     line-height: 1;
     margin: 3px;
 `;
