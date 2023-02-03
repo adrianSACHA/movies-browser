@@ -16,9 +16,9 @@ const movieDetailsSlice = createSlice({
             status: "success",
             movieDetails: [movieDetails],
         }),
-        setMovieId: (state, { payload: id }) => {
-            state.movieId = id;
-        },
+        setMovieId: (_, { payload: id }) => ({
+            movieId: id,
+        }),
         fetchMovieDetailsError: () => ({
             status: "error",
         }),
@@ -44,7 +44,7 @@ export const {
 const selectMovieState = state => state.movieDetails;
 
 export const selectMovieStatus = state => selectMovieState(state).status;
-export const selectMovieId = state => selectMovieState(state).movieId
+export const selectMovieId = state => selectMovieState(state).movieId;
 export const selectMovieCast = state => selectMovieState(state).credits.cast;
 export const selectMovieCrew = state => selectMovieState(state).credits.crew;
 
