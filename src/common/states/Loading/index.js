@@ -1,3 +1,4 @@
+import React from "react";
 import { StyledSpinner, Wrapper } from "./styled";
 
 export const Loading = () => (
