@@ -170,6 +170,7 @@ export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
     margin: 24px 0 0 0;
+    grid-column: span 2;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 14px;
