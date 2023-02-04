@@ -8,7 +8,7 @@ const movieListSlice = createSlice({
     genres: null,
     query: "",
     page: "1",
-    totalResult: 0,
+    totalResults: 0,
     totalPages: 0,
   },
   reducers: {
@@ -19,7 +19,7 @@ const movieListSlice = createSlice({
       state.status = "success";
       state.movies = movies.results;
       state.totalPages = movies.total_pages;
-      state.totalResult = movies.total_result;
+      state.totalResults = movies.total_results;
     },
     fetchMoviesError: (state) => {
       state.status = "error";
