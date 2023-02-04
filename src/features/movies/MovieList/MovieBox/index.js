@@ -1,7 +1,5 @@
 import React from "react";
 import { MainWrapper } from "../../../../common/MainWrapper";
-import { Title } from "../../../../common/Title";
-import poster from "./images/poster.jpg";
 import {
   MoviesListWrapper,
   Image,
@@ -10,39 +8,70 @@ import {
   RatingWrapper,
   Star,
   Rate,
-  Votes, 
-  Title, 
-  DescriptionWrapper, 
-  Year, 
-  TagsWraper, 
+  Votes,
+  Title,
+  DescriptionWrapper,
+  GreySubtitle,
+  TagsWraper,
   Tag,
 } from "./styled";
 
-const MovieBox = () => (
+const MovieBox = ({ genres, movies }) => (
   <MainWrapper>
-    <Title>Popular Movies</Title>
-    <MoviesListWrapper>
-      <LinkToMoviePage to={"/movie/:id"}>
-        <MovieWrapper>
-          <Image src={poster} alt="" />
-          <DescriptionWrapper>
-            <Title>Mulan</Title>
-            <Year>2020</Year>
-            <TagsWraper>
-              <Tag>Comedy</Tag>
-              <Tag>Fantasy</Tag>
-              <Tag>Action</Tag>
-              <Tag>Family</Tag>
-            </TagsWraper>
-          </DescriptionWrapper>
-          <RatingWrapper>
-            <Star />
-            <Rate>8.6</Rate>
-            <Votes>2567 votes</Votes>
-          </RatingWrapper>
-        </MovieWrapper>
-      </LinkToMoviePage>
-    </MoviesListWrapper>
+    {movies.map((movie) => (
+      <MoviesListWrapper>
+        <LinkToMoviePage
+          key={movies.indexOf(movie)}
+          to={`/movie/:id${movie.id}`}
+        >
+          <MovieWrapper>
+            {movie.poster_path ? (
+              <Image
+                src={`https://image.tmbd.org/t/p/original/${movie.poster_path}`}
+                alt=""
+              />
+            ) : (
+              <Image />
+            )}
+            <DescriptionWrapper>
+              {movie.title && <Title>{movie.title}</Title>}
+              {movie.release_date && (movie.department || movie.charakter) ? (
+                <GreySubtitle>
+                  {movie.department || movie.character} (
+                  {movie.release_date.slice(0, 4)})
+                </GreySubtitle>
+              ) : movie.release_date ? (
+                <GreySubtitle>{movie.release_date.slice(0, 4)}</GreySubtitle>
+              ) : movie.department || movie.character ? (
+                <GreySubtitle>
+                  {movie.department || movie.character}
+                </GreySubtitle>
+              ) : null}
+              {movie.genre_ids && genres ? (
+                <TagsWraper>
+                  {movie.genre_ids.map((genre_id) => (
+                    <Tag key={genre_id}>
+                      {genres.find((genre) => genre.id === genre_id).name}
+                    </Tag>
+                  ))}
+                </TagsWraper>
+              ) : (
+                ""
+              )}
+            </DescriptionWrapper>
+            {movie.vote_average > 0 && (
+              <RatingWrapper>
+                <Star />
+                <Rate>{movie.vote_average.toFixed(2)}</Rate>
+                {movie.vote_count && (
+                  <Votes>{`${movie.vote_count} votes`}</Votes>
+                )}
+              </RatingWrapper>
+            )}
+          </MovieWrapper>
+        </LinkToMoviePage>
+      </MoviesListWrapper>
+    ))}
   </MainWrapper>
 );
 

@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { ReactComponent as star } from "./icons/Star.svg";
 
 export const MoviesListWrapper = styled.section`
   display: grid;
@@ -101,7 +102,7 @@ export const Title = styled.h2`
   margin: 0 16px 5px;
 `;
 
-export const Year = styled.p`
+export const GreySubtitle = styled.p`
   font-weight: 400;
   font-size: 16px;
   line-height: 150%;
