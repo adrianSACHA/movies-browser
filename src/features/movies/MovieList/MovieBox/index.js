@@ -34,7 +34,7 @@ const MovieBox = ({ genres, movies }) => (
             )}
             <DescriptionWrapper>
               {movie.title && <Title>{movie.title}</Title>}
-              {movie.release_date && (movie.department || movie.charakter) ? (
+              {movie.release_date && (movie.department || movie.character) ? (
                 <GreySubtitle>
                   {movie.department || movie.character} (
                   {movie.release_date.slice(0, 4)})
