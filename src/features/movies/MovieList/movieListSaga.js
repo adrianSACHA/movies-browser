@@ -16,7 +16,7 @@ import {
   
   function* fetchMoviesHandler() {
     try {
-      yield delay(loadingDelay); //for loader demo purpose
+      yield delay(loadingDelay);
   
       yield put(fetchGenres());
       const page = yield select(selectPage);
