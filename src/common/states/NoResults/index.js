@@ -1,3 +1,5 @@
+
+import React from "react";
 import { PictureWrapper, Picture } from "./styled";
 import { MainWrapper } from "../../MainWrapper";
 
