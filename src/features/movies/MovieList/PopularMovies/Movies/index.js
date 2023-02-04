@@ -19,17 +19,20 @@ const Movies = () => {
   const genres = useSelector(selectGenres);
   const movies = useSelector(selectMovies);
   const totalResults = useSelector(selectTotalResults);
-  
+
   return totalResults === 0 ? (
     <NoResults />
   ) : (
     <>
       <MainWrapper>
-        <Title titie={ !query ? "Popular Movies" : `Search result for "${query}" (${totalResults})`} />
-        <MovieBox
-          genres={genres}
-          movies={movies}
+        <Title
+          title={
+            !query
+              ? "Popular Movies"
+              : `Search result for "${query}" (${totalResults})`
+          }
         />
+        <MovieBox genres={genres} movies={movies} />
       </MainWrapper>
     </>
   );

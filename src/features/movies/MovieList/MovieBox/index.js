@@ -1,5 +1,4 @@
 import React from "react";
-import { MainWrapper } from "../../../../common/MainWrapper";
 import {
   MoviesListWrapper,
   Image,
@@ -17,9 +16,9 @@ import {
 } from "./styled";
 
 const MovieBox = ({ genres, movies }) => (
-  <MainWrapper>
+  <MoviesListWrapper>
     {movies.map((movie) => (
-      <MoviesListWrapper>
+      
         <LinkToMoviePage
           key={movies.indexOf(movie)}
           to={`/movie/:id${movie.id}`}
@@ -27,7 +26,7 @@ const MovieBox = ({ genres, movies }) => (
           <MovieWrapper>
             {movie.poster_path ? (
               <Image
-                src={`https://image.tmbd.org/t/p/original/${movie.poster_path}`}
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
                 alt=""
               />
             ) : (
@@ -70,9 +69,9 @@ const MovieBox = ({ genres, movies }) => (
             )}
           </MovieWrapper>
         </LinkToMoviePage>
-      </MoviesListWrapper>
+      
     ))}
-  </MainWrapper>
+  </MoviesListWrapper>
 );
 
 export default MovieBox;

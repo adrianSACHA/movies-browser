@@ -28,7 +28,7 @@ const PopularMovies = () => {
 
   return {
     loading: <Loading />,
-    succes: <Movies />,
+    success: <Movies />,
     error: <ErrorBox />,
   }[status];
 };
