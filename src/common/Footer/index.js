@@ -40,7 +40,7 @@ export const Footer = ({ totalPages }) => {
         Page <Span>{page}</Span> of <Span>{lastPageNumber}</Span>
       </CounterBox>
       <ButtonNext disabled={page === lastPageNumber} onClick={nextPage} title="Next" />
-      <ButtonNext disabled={page === lastPageNumber} onClick={lastPage} title="Next" mobile="true" />
+      <ButtonNext disabled={page === lastPageNumber} onClick={lastPage} title="Last" mobile="true" />
     </Wrapper>
   );
 };
