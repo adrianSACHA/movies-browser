@@ -1,32 +1,33 @@
-import styled from "styled-components";
-import { ReactComponent as arrowPrev } from "./images/prevArrow.svg";
-import { ReactComponent as arrowNext } from "./images/nextArrow.svg";
+import styled from "styled-components"; 
 
 export const Wrapper = styled.div`
-  background: ${({ theme }) => theme.colors.mercury};
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 40px auto 88px;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    margin: 30px 12px;
+  }
 `;
 
-export const Button = styled.button`
-  background-color: ${({ theme }) => theme.colors.pattensBlue};
-  cursor: pointer;
-  padding: 8px 16px;
-  margin: 0 6px;
-  border-radius: 5px;
-  border: none;
-  font-size: 14px;
-  font-weight: 400;
+export const CounterBox = styled.div`
   display: flex;
   align-items: center;
-  gap: 8px;
-`;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: ${({ theme }) => theme.colors.waterloo};
+  margin: 0px 16px;
 
-export const IconArrowPrev = styled(arrowPrev)`
-  background-color: ${({ theme }) => theme.colors.blue};
-  ${Button}:disabled & {
-    color: ${({ theme }) => theme.colors.mineShaft}
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    font-size: 10px;
+    margin: 0px 6px;
   }
+`;
+export const Span = styled.span`
+  color: ${({ theme }) => theme.colors.woodsmoke};
+  font-weight: 600;
+  margin: 0px 6px;
 `;

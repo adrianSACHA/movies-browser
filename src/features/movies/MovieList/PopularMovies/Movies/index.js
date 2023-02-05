@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import {
   selectGenres,
   selectMovies,
+  selectTotalPages,
   selectTotalResults,
 } from "../../movieListSlice";
 import {
@@ -13,12 +14,14 @@ import { Title } from "../../../../../common/Title";
 import { MainWrapper } from "../../../../../common/MainWrapper";
 import MovieBox from "../../MovieBox";
 import { NoResults } from "../../../../../common/states/NoResults";
+import { Footer } from "../../../../../common/Footer";
 
 const Movies = () => {
   const query = useQueryParameter(searchQueryParamName);
   const genres = useSelector(selectGenres);
   const movies = useSelector(selectMovies);
   const totalResults = useSelector(selectTotalResults);
+  const totalPages = useSelector(selectTotalPages);
 
   return totalResults === 0 ? (
     <NoResults />
@@ -34,6 +37,7 @@ const Movies = () => {
         />
         <MovieBox genres={genres} movies={movies} />
       </MainWrapper>
+      <Footer totalPages={totalPages}/>
     </>
   );
 };
