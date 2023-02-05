@@ -3,7 +3,8 @@ import {
   useQueryParameter,
   useReplaceQueryParameter,
 } from "../Query/queryParameters";
-import { Wrapper } from "./styled";
+import { ButtonPrev, ButtonNext } from "./Buttons";
+import { CounterBox, Wrapper, Span } from "./styled";
 
 export const Footer = ({ totalPages }) => {
   const queryParameter = +useQueryParameter("page");
@@ -33,13 +34,13 @@ export const Footer = ({ totalPages }) => {
 
   return (
     <Wrapper>
-      <Button></Button>
-      <Button></Button>
-      <PaginationCounter>
-
-      </PaginationCounter>
-      <Button></Button>
-      <Button></Button>
+      <ButtonPrev disabled={page === 1} onClick={firstPage} title="First" mobile="true" />
+      <ButtonPrev disabled={page === 1} onClick={previousPage} title="Previous" />
+      <CounterBox>
+        Page <Span>{page}</Span> of <Span>{lastPageNumber}</Span>
+      </CounterBox>
+      <ButtonNext disabled={page === lastPageNumber} onClick={nextPage} title="Next" />
+      <ButtonNext disabled={page === lastPageNumber} onClick={lastPage} title="Next" mobile="true" />
     </Wrapper>
-  )
+  );
 };
