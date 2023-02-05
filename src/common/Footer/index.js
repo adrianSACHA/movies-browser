@@ -5,7 +5,7 @@ import {
 } from "../Query/queryParameters";
 import { Wrapper } from "./styled";
 
-const Footer = ({ totalPages }) => {
+export const Footer = ({ totalPages }) => {
   const queryParameter = +useQueryParameter("page");
   const page = queryParameter ? queryParameter : 1;
   const lastPageNumber = totalPages > 500 ? 500 : totalPages;
