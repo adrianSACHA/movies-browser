@@ -1,8 +1,4 @@
 import styled from "styled-components";
-<<<<<<< HEAD:src/features/movies/MoviePage/Movie/components/MovieCast/styled.js
-import { Link } from "react-router-dom";
-=======
->>>>>>> a29e0d680df9aea5c970bac7db7146ff6ad7911e:src/features/movies/MoviePage/components/MovieCast/styled.js
 
 export const HeaderMoviePeople = styled.h2`
     font-weight: 600;
@@ -34,11 +30,7 @@ export const ContainerMoviePeople = styled.ul`
     }
 `;
 
-<<<<<<< HEAD:src/features/movies/MoviePage/Movie/components/MovieCast/styled.js
-export const PersonLink = styled(Link)`
-=======
 export const PersonTile = styled.li`
->>>>>>> a29e0d680df9aea5c970bac7db7146ff6ad7911e:src/features/movies/MoviePage/components/MovieCast/styled.js
     width: 100%;
     height: auto;
     background: white;
