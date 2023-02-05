@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { ReactComponent as arrowPrev } from "./images/prevArrow.svg";
 import { ReactComponent as arrowNext } from "./images/nextArrow.svg";
 
@@ -25,7 +25,14 @@ export const Button = styled.button`
 `;
 
 export const IconArrowPrev = styled(arrowPrev)`
-  background-color: ${({ theme }) => theme.colors.blue};
+  color: ${({ theme }) => theme.colors.blue};
+  ${Button}:disabled & {
+    color: ${({ theme }) => theme.colors.mineShaft}
+  }
+`;
+
+export const IconArrowNext = styled(arrowNext)`
+  color: ${({ theme }) => theme.colors.blue};
   ${Button}:disabled & {
     color: ${({ theme }) => theme.colors.mineShaft}
   }
