@@ -16,8 +16,9 @@ export const ButtonPrev = ({ title, onClick, disabled, mobile }) => (
 
 export const ButtonNext = ({ title, onClick, disabled, mobile }) => (
   <StyledButton disabled={disabled} onClick={onClick}>
+    <Title>{title}</Title>
     <IconArrowNext />
     <IconArrowNext mobile={mobile} hide="true" />
-    <Title>{title}</Title>
+    
   </StyledButton>
 );
