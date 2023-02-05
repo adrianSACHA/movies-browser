@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 export const HeaderMoviePeople = styled.h2`
     font-weight: 600;
@@ -30,7 +31,7 @@ export const ContainerMoviePeople = styled.ul`
     }
 `;
 
-export const PersonTile = styled.li`
+export const PersonLink = styled(Link)`
     width: 100%;
     height: auto;
     background: white;
