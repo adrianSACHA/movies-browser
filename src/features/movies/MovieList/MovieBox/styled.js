@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ReactComponent as star } from "./icons/Star.svg";
+import { ReactComponent as star } from "./images/Star.svg";
+import noImage from "./images/camera.svg"
 
 export const MoviesListWrapper = styled.section`
   display: grid;
@@ -39,6 +40,7 @@ export const MovieWrapper = styled.div`
   transition: 0.5s;
   box-shadow: 0px 4px 12px rgba(186, 199, 213, 1);
   border-radius: 5px;
+  padding: 16px;
 
   &:hover {
     transform: scale(1.03);
@@ -53,27 +55,57 @@ export const MovieWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     grid-template-columns: auto 1fr;
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
+    padding: 12px;
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: auto;
   border-radius: 5px;
-  padding: 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     display: grid;
     grid-template-columns: auto 1fr;
     padding-right: 0px;
     width: 140px;
+    height: fit-content;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-right: 0px;
+    width: 130px;
+    height: fit-content;
   }
 `;
+  
+  export const ImageWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-radius: 5px;
+    background-image: url(${noImage});
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 30%;
+    background-color: ${({ theme }) => theme.colors.silver};
+    color: ${({ theme }) => theme.colors.white};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+      height: fit-content;
+    }
+    
+`;
+
 export const RatingWrapper = styled.div`
   display: flex;
   align-items: center;
-  margin-top: auto;
-  margin-left: 16px;
-  margin-bottom: 16px;
+  margin-top: 8px;
+  
 `;
 
 export const Star = styled(star)`
@@ -92,11 +124,25 @@ export const Rate = styled.span`
   color: ${({ theme }) => theme.colors.woodsmoke};
   margin: 0 12px;
   font-weight: 600;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    font-size: 13px;
+    margin: 0 12px 0 10px;
+  }
+
 `;
 
 export const Votes = styled.span`
   color: ${({ theme }) => theme.colors.waterloo};
   font-weight: 400;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    font-size: 13px;
+  }
+  
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
+    font-size: 12px;
+  }
 `;
 
 export const DescriptionWrapper = styled.div`
@@ -104,6 +150,12 @@ export const DescriptionWrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 8px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    margin: 0 0 0 8px;
+    gap: 4px;
+  }
 `;
 
 export const Title = styled.h2`
@@ -111,27 +163,45 @@ export const Title = styled.h2`
   font-size: 22px;
   line-height: 1.3;
   color: #18181b;
-  margin: 0 16px 5px;
+  margin: 16px 0 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    margin: 0 0 0 8px;
+    font-size: 18px;
+    line-height: 1.1;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
+    font-size: 16px;
+  }
 `;
 
 export const GreySubtitle = styled.p`
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 150%;
-  margin: 0 0 0 16px;
+  margin: 0;
   color: #7e839a;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    margin: 0 0 0 8px;
+    font-size: 14px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
+    font-size: 12px;
+  }
 `;
 
 export const TagsWraper = styled.div`
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  padding: 16px;
 `;
 
 export const Tag = styled.div`
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: 4px 8px;
+  font-size: 12px;
   border-radius: 5px;
   line-height: 1.4;
   font-weight: 400;

@@ -13,6 +13,7 @@ import {
   GreySubtitle,
   TagsWraper,
   Tag,
+  ImageWrapper,
 } from "./styled";
 
 const MovieBox = ({ genres, movies }) => (
@@ -20,14 +21,16 @@ const MovieBox = ({ genres, movies }) => (
     {movies.map((movie) => (
       <LinkToMoviePage key={movies.indexOf(movie)} to={`/movie/:id${movie.id}`}>
         <MovieWrapper>
-          {movie.poster_path ? (
-            <Image
-              src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
-              alt=""
-            />
-          ) : (
-            <Image />
-          )}
+          <ImageWrapper>
+            {movie.poster_path ? (
+              <Image
+                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                alt=""
+              />
+            ) : (
+              <Image />
+            )}
+          </ImageWrapper>
           <DescriptionWrapper>
             {movie.title && <Title>{movie.title}</Title>}
             {movie.release_date && (movie.department || movie.character) ? (
@@ -55,7 +58,7 @@ const MovieBox = ({ genres, movies }) => (
             {movie.vote_average > 0 && (
               <RatingWrapper>
                 <Star />
-                <Rate>{movie.vote_average.toFixed(2)}</Rate>
+                <Rate>{movie.vote_average.toFixed(1)}</Rate>
                 {movie.vote_count && (
                   <Votes>{`${movie.vote_count} votes`}</Votes>
                 )}
