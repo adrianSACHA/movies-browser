@@ -1,15 +1,20 @@
 import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom/client';
+import { Provider } from 'react-redux';
 import { Normalize } from 'styled-normalize';
 import App from './core/App';
 import reportWebVitals from './reportWebVitals';
+import store from "./core/store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <Normalize />
-    <App />
-  </React.StrictMode>
+  <StrictMode>
+    <Provider store={store}>
+      <Normalize />
+      <App />
+    </Provider>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

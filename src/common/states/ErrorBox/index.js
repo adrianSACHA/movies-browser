@@ -1,3 +1,4 @@
+import React from "react";
 import { ButtonLink } from "../ButtonLink";
 import { githubUsername } from "../githubUsername";
 import { Header, Paragraph, Wrapper } from "./styled";

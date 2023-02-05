@@ -1,10 +1,6 @@
-import styled from "styled-components";
+import React from "react";
+import { StyledTitle } from "./styled";
 
-export const Title = styled.h1`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 36px;
-  line-height: 120%;
-  color: ${({ theme }) => theme.colors.woodsmoke};
-`;
+export const Title = ({ title }) => (
+    <StyledTitle>{title}</StyledTitle>
+);

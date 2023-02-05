@@ -1,85 +1,36 @@
 import React from "react";
-import { MainWrapper } from "../../../../common/MainWrapper";
-import { Title } from "../../../../common/Title";
-import poster from "./images/poster.jpg";
-import { MoviesListWrapper, Image, MovieWrapper, LinkToMoviePage } from "./styled";
-import Description from "./Description";
-import { Rating } from "./Rating"; 
-import { getMovies } from "../../../../common/catchApi/apiDownload";
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from "react";
+import {
+  searchQueryParamName,
+  useQueryParameter,
+} from "../../../../common/Query/queryParameters";
+import { fetchMovies, isQuery, selectStatus, setPage } from "../movieListSlice";
+import { ErrorBox } from "../../../../common/states/ErrorBox";
+import { Loading } from "../../../../common/states/Loading";
+import Movies from "./Movies";
 
-const PopularMovies = () => (
-  <MainWrapper>
-    <Title>Popular Movies</Title>
-    
-      <MoviesListWrapper>
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
+const PopularMovies = () => {
+  const dispatch = useDispatch();
+  const status = useSelector(selectStatus);
+  const page = +useQueryParameter("page");
+  const query = useQueryParameter(searchQueryParamName);
 
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
+  useEffect(() => {
+    if (!page) {
+      dispatch(setPage(1));
+    } else {
+      dispatch(setPage(page));
+    }
+    dispatch(isQuery(query));
+    dispatch(fetchMovies());
+  }, [dispatch, page, query]);
 
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-
-        <LinkToMoviePage to={"/movie/:id"}>
-          <MovieWrapper>
-            <Image src={poster} alt="" />
-            <Description />
-            <Rating />
-          </MovieWrapper>
-        </LinkToMoviePage>
-        
-      </MoviesListWrapper>
-  </MainWrapper>
-      
-    
-);
+  return {
+    loading: <Loading />,
+    success: <Movies />,
+    error: <ErrorBox />,
+  }[status];
+};
 
 export default PopularMovies;
