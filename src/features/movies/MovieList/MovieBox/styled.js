@@ -13,6 +13,7 @@ export const MoviesListWrapper = styled.section`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
@@ -36,7 +37,7 @@ export const MovieWrapper = styled.div`
   display: grid;
   grid-template-rows: auto 1fr;
   transition: 0.5s;
-  box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+  box-shadow: 0px 4px 12px rgba(186, 199, 213, 1);
   border-radius: 5px;
 
   &:hover {
@@ -48,6 +49,10 @@ export const MovieWrapper = styled.div`
     box-shadow: ${({ theme }) => theme.activeShadow};
     transform: scale(1.05);
   }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    grid-template-columns: auto 1fr;
+  }
 `;
 
 export const Image = styled.img`
@@ -55,6 +60,13 @@ export const Image = styled.img`
   height: auto;
   border-radius: 5px;
   padding: 16px;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding-right: 0px;
+    width: 140px;
+  }
 `;
 export const RatingWrapper = styled.div`
   display: flex;
@@ -68,10 +80,10 @@ export const Star = styled(star)`
   width: 24px;
   height: auto;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     width: 20px;
   }
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     width: 16px;
   }
 `;
