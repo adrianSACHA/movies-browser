@@ -21,7 +21,7 @@ const MovieBox = ({ genres, movies }) => (
       
         <LinkToMoviePage
           key={movies.indexOf(movie)}
-          to={`/movie/:id${movie.id}`}
+          to={`/movie/${movie.id}`}
         >
           <MovieWrapper>
             {movie.poster_path ? (
