@@ -18,7 +18,7 @@ const MoviePage = () => {
 
     useEffect(() => {
         dispatch(fetchMovieDetails());
-        dispatch(setMovieId(id));
+        dispatch(setMovieId(id.slice(3)));
     }, [id, dispatch]);
 
     return {
