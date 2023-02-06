@@ -8,6 +8,7 @@ import {
     PersonImage,
 } from "./styled";
 import { MainWrapper } from "../../../../../../common/MainWrapper";
+console.log("moviecast");
 
 const MovieCast = ({ path, name, role }) => (
     <MainWrapper>
