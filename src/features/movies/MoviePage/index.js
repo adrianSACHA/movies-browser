@@ -19,7 +19,6 @@ const MoviePage = () => {
     useEffect(() => {
         dispatch(fetchMovieDetails());
         dispatch(setMovieId(id));
-        
     }, [id, dispatch]);
 
     return {
