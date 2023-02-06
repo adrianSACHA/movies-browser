@@ -1,4 +1,5 @@
 import React from "react";
+import { Fragment } from "react";
 import {
     TileWrapper,
     MovieTileContainer,
@@ -18,41 +19,55 @@ import {
     MetaInfo,
     Wrapper,
 } from "./styled";
-import poster from "./images/poster.png"
 import { ReactComponent as Star } from "./icons/Star.svg"
 
-const MovieTile = () => (
+const MovieTile = ({ poster_path, title, release, production, genres, rate, votes, description }) => (
+    
     <TileWrapper>
         <MovieTileContainer>
-            <Image src={poster} alt="" />
+            <Image src={`https://image.tmdb.org/t/p/original/${poster_path}`} />
             <Content>
                 <Wrapper>
-                    <Title>Mulan</Title>
-                    <SubTitle>2020</SubTitle>
-                    <MetaContainer>
-                        <MetaLabel>Production:</MetaLabel>
-                        <MetaInfo>China, United States of America</MetaInfo>
-                    </MetaContainer>
-                    <MetaContainer>
-                        <MetaLabel>Release date:</MetaLabel>
-                        <MetaInfo>24.10.2020</MetaInfo>
-                    </MetaContainer>
-                    <Tags>
-                        <Tag>Action</Tag>
-                        <Tag>Adventure</Tag>
-                        <Tag>Drama</Tag>
-                    </Tags>
-                    <Rating>
-                        <Star />
-                        <RateBig>7,8</RateBig>
-                        <RateSmall>/ 10</RateSmall>
-                        <Votes>335 votes</Votes>
-                    </Rating>
+                    <Title>{title}</Title>
+                    <SubTitle>{release.slice(0, 4)}</SubTitle>
+                    {production && (
+                        <MetaContainer>
+                            <MetaLabel>Production:</MetaLabel>
+                            {production.map((country, index, countries) =>
+                                <Fragment key={index}>
+                                    <MetaInfo key={country.name}>
+                                        {country.name}
+                                        
+                                    </MetaInfo>
+                                </Fragment>
+                            )}
+                        </MetaContainer>
+                    )}
+                    {release && (
+                        <MetaContainer>
+                            <MetaLabel>Release date:</MetaLabel>
+                            <MetaInfo>{release}</MetaInfo>
+                        </MetaContainer>
+                    )}
+                    {genres && (
+                        <Tags>
+                            {genres.map((genre) => (
+                                <Tag key={genre.id}>
+                                    {genre.name}
+                                </Tag>
+                            ))}
+                        </Tags>
+                    )}
+                    {rate > 0 && votes && (
+                        <Rating>
+                            <Star />
+                            <RateBig>{rate.toFixed(1)}</RateBig>
+                            <RateSmall>/ 10</RateSmall>
+                            <Votes>{votes} votes</Votes>
+                        </Rating>
+                    )}
                 </Wrapper>
-                <Description>
-                    A young Chinese maiden disguises herself as a male warrior in order to save her father.
-                    Disguises herself as a male warrior in order to save her father.  A young Chinese maiden disguises herself as a male warrior in order to save her father.
-                </Description>
+                <Description>{description}</Description>
             </Content>
         </MovieTileContainer>
     </TileWrapper>
