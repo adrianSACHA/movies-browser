@@ -2,8 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import {
     selectMovieDetails,
-    selectMovieCast,
-    selectMovieCrew,
+    selectMovieCredits,
 } from "../movieDetailsSlice";
 import MovieTile from "./components/MovieTile";
 import Backdrop from "./components/Backdrop";
@@ -13,44 +12,34 @@ import MovieCrew from "./components/MovieCrew";
 
 
 const MoviePageDetails = () => {
-    const movieDetails = useSelector(selectMovieDetails);
-    const movieCrew = useSelector(selectMovieCrew);
-    const movieCast = useSelector(selectMovieCast);
+    const movie = useSelector(selectMovieDetails);
+    const credits = useSelector(selectMovieCredits);
 
     return (
         <>
-            {movieDetails.map(({ original_title, vote_average, vote_count, backdrop_path }) => (
+            {movie.backdrop_path && (
                 <Backdrop
-                    title={original_title}
-                    rating={vote_average}
-                    votes={vote_count}
-                    backdrop_path={backdrop_path}
+                    backdrop={movie.backdrop_path}
+                    title={movie.original_title}
+                    rate={movie.vote_average}
+                    votes={movie.vote_count}
                 />
-            )
             )}
-            {movieDetails.map(({
-                poster_path,
-                title,
-                release_date,
-                production_countries,
-                vote_average,
-                vote_count,
-                overview,
-                genres,
-            }) => (
+            {movie.poster_path && (
                 <MovieTile
-                    poster_path={poster_path}
-                    title={title}
-                    release_date={release_date}
-                    rating={vote_average}
-                    votes={vote_count}
-                    countries={production_countries}
-                    article={overview}
-                    genres={genres}
+                    poster_path={movie.poster_path}
+                    title={movie.original_title}
+                    release={movie.release_date}
+                    production={movie.production_countries}
+                    genres={movie.genres}
+                    rate={movie.vote_average}
+                    votes={movie.vote_count}
+                    description={movie.overview}
                 />
-            ))}
-            {movieCast.lengh > 0 && movieCast.map((actor) => (
-                < MovieCast 
+            )}
+
+            {credits.cast && credits.cast.map((actor) => (
+                < MovieCast
                     key={actor.credit_id}
                     path={actor.profile_path}
                     name={actor.original_name}
@@ -58,15 +47,15 @@ const MoviePageDetails = () => {
                     id={actor.id}
                 />
             ))}
-            {movieCrew.lengh > 0 && movieCrew.map((member) => (
-                <MovieCrew 
+            {credits.crew > 0 && credits.crew.map((member) => (
+                <MovieCrew
                     key={member.credit_id}
                     path={member.profile_path}
                     name={member.original_name}
                     role={member.job}
                     id={member.id}
                 />
-            ))}
+            ))} 
         </>
     );
 };
