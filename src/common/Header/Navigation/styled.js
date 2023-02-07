@@ -10,6 +10,8 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 5px;
+
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     margin: 0;
