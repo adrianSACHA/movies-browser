@@ -19,7 +19,7 @@ const MoviePageDetails = () => {
         <>
             {movie.backdrop_path && (
                 <Backdrop
-                    backdrop={movie.backdrop_path}
+                    backdrop_path={movie.backdrop_path}
                     title={movie.original_title}
                     rate={movie.vote_average}
                     votes={movie.vote_count}
