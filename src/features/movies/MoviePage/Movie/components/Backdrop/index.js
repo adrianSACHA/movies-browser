@@ -16,7 +16,6 @@ import {
 const Backdrop = ({title, backdrop_path, vote_average, vote_count}) => {
     return (
         <>
-        {backdrop_path && (
         <BackdropWrapper >
             <BackdropContainer>
                 <BackdropImage src={`${imgBackdrop}${backdrop_path}`}
@@ -32,7 +31,6 @@ const Backdrop = ({title, backdrop_path, vote_average, vote_count}) => {
                     </BackdropInfoContainer>
                 </BackdropContainer>
             </BackdropWrapper>
-        )}
         </>
     );
 };
