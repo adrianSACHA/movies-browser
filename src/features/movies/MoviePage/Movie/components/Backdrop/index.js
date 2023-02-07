@@ -2,6 +2,7 @@ import React from "react";
 import { imgBackdrop } from "../../../../../../common/catchApi/apiValue";
 import {
     BackdropContainer,
+    Pleksa,
     BackdropImage,
     BackdropWrapper,
     BackdropInfoContainer,
@@ -13,20 +14,21 @@ import {
     LongTitle,
 } from "./styled";
 
-const Backdrop = ({title, backdrop_path, vote_average, vote_count}) => {
+const Backdrop = ({ title, backdrop_path, rate, votes}) => {
     return (
         <>
         <BackdropWrapper >
             <BackdropContainer>
+                <Pleksa />
                 <BackdropImage src={`${imgBackdrop}${backdrop_path}`}
               alt={`poster of ${title}`}/>
                     <BackdropInfoContainer>
                         <LongTitle>{title}</LongTitle>
                         <Rating>
                             <StarIcon />
-                            <RateBig>{vote_average}</RateBig>
+                            <RateBig>{rate.toFixed(1)}</RateBig>
                             <RateSmall>/ 10</RateSmall>
-                            <Votes>{vote_count} votes</Votes>
+                            <Votes>{votes} votes</Votes>
                         </Rating>
                     </BackdropInfoContainer>
                 </BackdropContainer>
