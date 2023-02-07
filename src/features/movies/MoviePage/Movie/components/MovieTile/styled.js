@@ -1,9 +1,15 @@
 import styled from "styled-components";
+import { ReactComponent as Star } from "./icons/Star.svg";
 
 export const TileWrapper = styled.div`
     display: flex;
     justify-content: center;
     margin: 64px auto;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        margin-top: 16px;
+        margin-bottom: 21px;
+    }
 `;
 
 export const MovieTileContainer = styled.div`
@@ -13,13 +19,20 @@ export const MovieTileContainer = styled.div`
     background: ${({ theme }) => theme.colors.white};
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-gap: 40px;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 0 40px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+        grid-template-columns: 1fr 2fr;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        grid-template-areas: 
-                    "a b"
-                    "b b";
+        grid-template-columns: 1fr 2fr;
+        grid-gap: 0 16px;
         margin: 16px;
         padding: 16px;
     }
@@ -28,17 +41,22 @@ export const MovieTileContainer = styled.div`
 export const Image = styled.img`    
     width: 100%;
     height: auto;
+    grid-row: span 2;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         width: 114px;
-        height: 169px;
+        height: auto;
     }
 `;
 
 export const Content = styled.div`
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        display: flex;
-        flex-wrap: wrap;
+        gap: 8px;
     }
 `;
 
@@ -47,12 +65,10 @@ export const Title = styled.header`
     font-size: 36px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.black};
-    margin-bottom: 24px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 16px;
         line-height: 1.3;
-        margin-bottom: 4px;
     }
 `;
 
@@ -60,26 +76,26 @@ export const SubTitle = styled.div`
     font-weight: 400;
     font-size: 22px;
     line-height: 1.2;
-    margin-bottom: 24px;
     color: ${({ theme }) => theme.colors.black};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 13px;
         line-height: 1.3;
-        margin-bottom: 8px;
         color: ${({ theme }) => theme.colors.waterloo};
     }
 `;
-
-export const MetaContainer = styled.div`
+export const MetaWrapper = styled.div`
     display: flex;
+    flex-direction: column;
+    gap: 8px;
+`;
+export const MetaContainer = styled.div`
 `;
 
 export const MetaLabel = styled.span`
     font-size: 18px;
     line-height: 1.2;
     margin-right: 10px;
-    margin-bottom: 8px;
     color: ${({ theme }) => theme.colors.stormGray};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -105,10 +121,10 @@ export const Tags = styled.ul`
     flex-wrap: wrap;
     list-style: none;
     padding-left: 0;
-    margin: 8px -8px 24px -8px;
+    margin: 8px -8px 0 -8px;
     
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        margin: 8px -8px 12px -8px;
+        margin: 0 -8px 0 -8px;
     }
 `;
 
@@ -122,12 +138,18 @@ export const Tag = styled.li`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 10px;
         padding: 4px 8px;
+        margin: 4px;
     }
 `;
 
 export const Rating = styled.div`
     display: flex;
     align-items: center;
+`;
+
+export const StyledStar = styled(Star)`
+    width: clamp(16px, 2vw, 24px);
+    height: auto;
 `;
 
 export const RateBig = styled.span`
@@ -163,20 +185,30 @@ export const Votes = styled.span`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 13px;
+        padding: 0;
     }
 `;
 
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
-    margin: 24px 0 0 0;
+    margin: 0;
     ;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
+        grid-column: span 2;
+        margin-top: 30px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+        grid-column: span 2;
+        margin-top: 24px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 14px;
         margin: 19px 0 0 0;
-        grid-column: span 2
+        grid-column: span 2;
     }
 `;
 
-export const Wrapper = styled.div``;
