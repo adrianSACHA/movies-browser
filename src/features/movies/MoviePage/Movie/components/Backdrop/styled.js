@@ -30,12 +30,16 @@ export const BackdropImage = styled.img`
 `;
 
 export const BackdropInfoContainer = styled.div`
-    padding-left: 16px;
+    padding-left: 25px;
     margin-bottom: clamp(10px, 3vw, 56px);
     display: flex;
     flex-direction: column;
     position: absolute;
     color: ${({ theme }) => theme.colors.white};
+    
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+            padding-left: 16px;
+        }
 `;
 
 export const LongTitle = styled.header`
@@ -52,9 +56,10 @@ export const Rating = styled.div`
     grid-gap: 17px 8px;
     align-items: end;
 
-        @media (max-width: ${({ theme }) => theme.breakpoints.medium}) {
+        @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+            display: flex;
+            align-items: center;
             margin: 0 8px 0 0;
-            grid-column-gap: 5px;
         }
 `;
 
@@ -65,7 +70,7 @@ export const StarIcon = styled(Star)`
 
 export const RateBig = styled.span`
     font-weight: 500;
-    font-size: clamp(14px, 3vw, 24px);
+    font-size: clamp(14px, 3vw, 30px);
     line-height: 1;
     margin: 3px;
 `;
@@ -78,4 +83,5 @@ export const Votes = styled.span`
     margin-left: 0;
     grid-row: 2;
     grid-column: 1 / 5;
+    font-size: clamp(10px, 2vw, 16px);
 `;
