@@ -6,22 +6,26 @@ export const BackdropWrapper = styled.div`
 `;
 
 export const BackdropContainer = styled.div`
-    position: relative;
+    display: flex;
+    flex-direction: column;
     max-width: 1368px;
+    height: 768px;
     margin: 0 auto;
     display: flex;
     align-items: flex-end;
+    padding: 0 20px;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 
+        inset 0 0 40px 40px rgb(0 0 0),
+        inset 0 0 140px 0 rgb(0 0 0),
+        inset 0px -140px 140px -12px rgb(0 0 0);
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.widest}) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.widest}px) {
         margin: 0 6vw;
     }
-`;
-
-export const Pleksa = styled.div`
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 3vw 2.5vw ${({ theme }) => theme.colors.blakc};
 `;
 
 export const BackdropImage = styled.img`

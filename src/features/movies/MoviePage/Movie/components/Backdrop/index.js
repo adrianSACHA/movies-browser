@@ -1,8 +1,7 @@
 import React from "react";
-import { imgBaseUrl } from "../../../../../../common/catchApi/apiValue";
+import { imgBackdrop } from "../../../../../../common/catchApi/apiValue";
 import {
     BackdropContainer,
-    Pleksa,
     BackdropImage,
     BackdropWrapper,
     BackdropInfoContainer,
@@ -14,13 +13,14 @@ import {
     LongTitle,
 } from "./styled";
 
-const Backdrop = ({ movie }) => (
-
-        <BackdropWrapper>
-            {movie.backdrop_path && movie.map((backdrop_path, title, vote_average, vote_count) => (
-                <BackdropContainer>
-                    <Pleksa />
-                    <BackdropImage src={`${imgBaseUrl}/w1280${backdrop_path}`} alt={`poster of ${title}`} />
+const Backdrop = ({title, backdrop_path, vote_average, vote_count}) => {
+    return (
+        <>
+        {backdrop_path && (
+        <BackdropWrapper >
+            <BackdropContainer>
+                <BackdropImage src={`${imgBackdrop}${backdrop_path}`}
+              alt={`poster of ${title}`}/>
                     <BackdropInfoContainer>
                         <LongTitle>{title}</LongTitle>
                         <Rating>
@@ -31,8 +31,10 @@ const Backdrop = ({ movie }) => (
                         </Rating>
                     </BackdropInfoContainer>
                 </BackdropContainer>
-            ))}
-        </BackdropWrapper>
-);
+            </BackdropWrapper>
+        )}
+        </>
+    );
+};
 
 export default Backdrop;
