@@ -1,5 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
+import { imgBaseUrl } from "../../../../../../common/catchApi/apiValue";
 import {
     TileWrapper,
     MovieTileContainer,
@@ -17,19 +18,19 @@ import {
     MetaContainer,
     MetaLabel,
     MetaInfo,
-    Wrapper,
+    StyledStar,
+    MetaWrapper,
 } from "./styled";
-import { ReactComponent as Star } from "./icons/Star.svg"
 
 const MovieTile = ({ poster_path, title, release, production, genres, rate, votes, description }) => (
-    
+
     <TileWrapper>
         <MovieTileContainer>
-            <Image src={`https://image.tmdb.org/t/p/original/${poster_path}`} />
+            <Image src={`${imgBaseUrl}/original/${poster_path}`} />
             <Content>
-                <Wrapper>
-                    <Title>{title}</Title>
-                    <SubTitle>{release.slice(0, 4)}</SubTitle>
+                <Title>{title}</Title>
+                <SubTitle>{release.slice(0, 4)}</SubTitle>
+                <MetaWrapper>
                     {production && (
                         <MetaContainer>
                             <MetaLabel>Production:</MetaLabel>
@@ -37,7 +38,7 @@ const MovieTile = ({ poster_path, title, release, production, genres, rate, vote
                                 <Fragment key={index}>
                                     <MetaInfo key={country.name}>
                                         {country.name}
-                                        
+
                                     </MetaInfo>
                                 </Fragment>
                             )}
@@ -49,26 +50,26 @@ const MovieTile = ({ poster_path, title, release, production, genres, rate, vote
                             <MetaInfo>{release}</MetaInfo>
                         </MetaContainer>
                     )}
-                    {genres && (
-                        <Tags>
-                            {genres.map((genre) => (
-                                <Tag key={genre.id}>
-                                    {genre.name}
-                                </Tag>
-                            ))}
-                        </Tags>
-                    )}
-                    {rate > 0 && votes && (
-                        <Rating>
-                            <Star />
-                            <RateBig>{rate.toFixed(1)}</RateBig>
-                            <RateSmall>/ 10</RateSmall>
-                            <Votes>{votes} votes</Votes>
-                        </Rating>
-                    )}
-                </Wrapper>
-                <Description>{description}</Description>
+                </MetaWrapper>
+                {genres && (
+                    <Tags>
+                        {genres.map((genre) => (
+                            <Tag key={genre.id}>
+                                {genre.name}
+                            </Tag>
+                        ))}
+                    </Tags>
+                )}
+                {rate > 0 && votes && (
+                    <Rating>
+                        <StyledStar />
+                        <RateBig>{rate.toFixed(1)}</RateBig>
+                        <RateSmall>/ 10</RateSmall>
+                        <Votes>{votes} votes</Votes>
+                    </Rating>
+                )}
             </Content>
+            <Description>{description}</Description>
         </MovieTileContainer>
     </TileWrapper>
 );
