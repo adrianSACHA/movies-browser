@@ -5,10 +5,11 @@ export const Wrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   min-height: 94px;
+  justify-content: space-evenly;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     min-height: 142px;
   }
 `;
