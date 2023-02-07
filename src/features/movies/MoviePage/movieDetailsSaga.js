@@ -28,8 +28,8 @@ function* fetchCreditsHandler() {
     try {
         const id = yield select(selectMovieId);
 
-        const movie = yield call(getCredits, id);
-        yield put(fetchCreditsSuccess(movie));
+        const credits = yield call(getCredits, id);
+        yield put(fetchCreditsSuccess(credits));
     } catch (error) {
         yield put(fetchMovieDetailsError());
     }
