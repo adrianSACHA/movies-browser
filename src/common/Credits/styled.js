@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Link } from "react-router-dom";
 
 export const HeaderMoviePeople = styled.h2`
     font-weight: 600;
@@ -31,7 +30,7 @@ export const ContainerMoviePeople = styled.ul`
     }
 `;
 
-export const PersonLink = styled(Link)`
+export const PersonLink = styled.div`
     width: 100%;
     height: auto;
     background: white;
@@ -58,6 +57,7 @@ export const PersonName = styled.p`
     line-height: 1.3;
     margin: 12px 0 8px 0;
     color: #18181B;
+    text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 14px;
