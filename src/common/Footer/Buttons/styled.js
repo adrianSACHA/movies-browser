@@ -14,13 +14,17 @@ export const StyledButton = styled.button`
   align-items: center;
   gap: 8px;
 
+  &:hover {
+    filter: brightness(96%);
+  }
+
   &:disabled {
     background-color: ${({ theme }) => theme.colors.mystic};
     color: ${({ theme }) => theme.colors.woodsmoke};
     pointer-events: none;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     padding: 8px 10px;
     gap: 6px;
   }
@@ -37,7 +41,7 @@ export const IconArrowPrevious = styled(arrowPrev)`
     css`
       display: none;
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
         display: flex;
       }
     `};
@@ -60,7 +64,7 @@ export const IconArrowNext = styled(arrowNext)`
     css`
       display: none;
 
-      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
         display: flex;
       }
     `};
