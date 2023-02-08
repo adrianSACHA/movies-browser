@@ -18,9 +18,12 @@ import {
 
 const MovieBox = ({ genres, movies }) => (
   <MoviesListWrapper>
-    {movies.map((movie) => (
-      <LinkToMoviePage key={movies.indexOf(movie)} to={`/movie/:id${movie.id}`}>
-        <MovieWrapper>
+    {movies.map((movie) => (    
+        <LinkToMoviePage
+          key={movies.indexOf(movie)}
+          to={`/movie/${movie.id}`}
+        >
+          <MovieWrapper>     
           <ImageWrapper>
             {movie.poster_path ? (
               <Image
