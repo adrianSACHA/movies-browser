@@ -15,6 +15,7 @@ import {
     PersonImage,
 } from "../../../../common/Credits/styled";
 import { MainWrapper } from "../../../../common/MainWrapper";
+import picture from "../../../../common/Credits/Picture.svg";
 
 const MoviePageDetails = () => {
     const movie = useSelector(selectMovieDetails);
@@ -51,9 +52,9 @@ const MoviePageDetails = () => {
                         {cast.map((actor) =>
                             <PersonLink key={actor.id}
                             >
-                                {actor.profile_path && (
+                                {actor.profile_path ? (
                                     <PersonImage src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt="" />
-                                )}
+                                ): <PersonImage src={picture} alt="" />}
                                 {actor.name && (
                                     <PersonName>{actor.name}</PersonName>
                                 )}
@@ -72,9 +73,9 @@ const MoviePageDetails = () => {
                         {crew.map((member) =>
                             <PersonLink key={member.id}
                             >
-                                {member.profile_path && (
+                                {member.profile_path ? (
                                     <PersonImage src={`https://image.tmdb.org/t/p/w500/${member.profile_path}`} alt="" />
-                                )}
+                                ): <PersonImage src={picture} alt="" />}
                                 {member.name && (
                                     <PersonName>{member.name}</PersonName>
                                 )}
