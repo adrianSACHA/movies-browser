@@ -17,6 +17,7 @@ export const StyledButton = styled.button`
   &:disabled {
     background-color: ${({ theme }) => theme.colors.mystic};
     color: ${({ theme }) => theme.colors.woodsmoke};
+    pointer-events: none;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -28,7 +29,7 @@ export const StyledButton = styled.button`
 export const IconArrowPrevious = styled(arrowPrev)`
   color: ${({ theme }) => theme.colors.blue};
   ${StyledButton}:disabled & {
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.waterloo};
   }
 
   ${({ mobile }) =>
@@ -51,7 +52,7 @@ export const IconArrowPrevious = styled(arrowPrev)`
 export const IconArrowNext = styled(arrowNext)`
   color: ${({ theme }) => theme.colors.blue};
   ${StyledButton}:disabled & {
-    color: ${({ theme }) => theme.colors.darkGrey};
+    color: ${({ theme }) => theme.colors.waterloo};
   }
 
   ${({ mobile }) =>
@@ -75,7 +76,8 @@ export const Title = styled.span`
   font-weight: 400;
   font-size: 14px;
   line-height: 140%;
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     display: none;
   }
 `;
