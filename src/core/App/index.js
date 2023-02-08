@@ -3,7 +3,7 @@ import { Route, Routes, Navigate, HashRouter } from "react-router-dom";
 import { GlobalStyle } from "./GlobalStyle";
 import { ThemeProvider } from "styled-components";
 import { theme } from "./theme";
-import  Header  from "../../common/Header/index";
+import Header from "../../common/Header/index";
 import { toPopularMovies, toMoviePage, toPeople } from "./routes";
 import PopularMovies from "../../features/movies/MovieList/PopularMovies";
 import MoviePage from "../../features/movies/MoviePage";
