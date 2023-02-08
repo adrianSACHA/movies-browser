@@ -19,7 +19,7 @@ export const Navigation = () => (
       </Logo>
     </StyledLink>
     <Menu>
-      <MenuItemLink to={"/popularMovies"}>Movies</MenuItemLink>
+      <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
       <MenuItemLink to={"/people"}>People</MenuItemLink>
     </Menu>
     <Search />
