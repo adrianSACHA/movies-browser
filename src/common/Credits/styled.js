@@ -1,16 +1,5 @@
 import styled from "styled-components";
 
-export const MovieCastWrapper = styled.div`
-    max-width: 1368px;
-    margin: auto;
-    padding: 0;
-    
-    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-        margin: 0 16px;
-        grid-template-columns: repeat(4, 1fr);
-    }
-`;
-
 export const HeaderMoviePeople = styled.h2`
     font-weight: 600;
     font-size: 36px;
@@ -19,7 +8,7 @@ export const HeaderMoviePeople = styled.h2`
     color: ${({ theme }) => theme.colors.black};
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-        margin: 21px 0;
+        margin: 21px 16px;
     }
 `;
 
@@ -31,6 +20,9 @@ export const ContainerMoviePeople = styled.ul`
     grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
     grid-gap: 24px;
 
+    @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
+        margin: 0 16px;
+    }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
@@ -38,9 +30,9 @@ export const ContainerMoviePeople = styled.ul`
     }
 `;
 
-export const PersonTile = styled.li`
-    width: 208px;
-    height: 339px;
+export const PersonLink = styled.div`
+    width: 100%;
+    height: auto;
     background: white;
     padding: 15px;
     display: flex;
@@ -49,21 +41,14 @@ export const PersonTile = styled.li`
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        width: 136px;
-        height: 245px;
         padding: 8px;
         border-radius: 5px;
     }
 `;
 
 export const PersonImage = styled.img`    
-    width: 176px;
-    height: 231px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        width: 120px;
-        height: 178px;
-    }
+    width: 100%;
+    height: auto;
 `;
 
 export const PersonName = styled.p`
@@ -72,6 +57,7 @@ export const PersonName = styled.p`
     line-height: 1.3;
     margin: 12px 0 8px 0;
     color: #18181B;
+    text-align: center;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 14px;
