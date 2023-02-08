@@ -7,11 +7,8 @@ export const MainWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  /* justify-content: center; */
-  min-height: 94px;
-  justify-content: space-evenly;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     min-height: 142px;
   }
 `;
@@ -22,13 +19,17 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
+  height: 94px;
+
   gap: 5px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
-    margin: 0;
-    gap: 5px;
+    /* margin: 0; */
+    /* gap: 5px; */
+    margin-bottom: 16px;
+
   }
 `;
 
@@ -88,11 +89,9 @@ export const Menu = styled.nav`
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin: 12px;
-  width: 220px;
+  width: fit-content;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-weight: 600;
     font-size: 12px;
     line-height: 18px;
     width: fit-content;
@@ -105,7 +104,7 @@ export const MenuItemLink = styled(NavLink)`
   text-decoration: none;
   color: ${({ theme }) => theme.colors.white};
   padding: 8px 24px;
-  width: 115px;
+  width: 105px;
   border-radius: 24px;
   border: 1px solid transparent;
   max-width: 300px;
