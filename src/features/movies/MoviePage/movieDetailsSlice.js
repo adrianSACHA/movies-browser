@@ -28,7 +28,7 @@ const movieDetailsSlice = createSlice({
         },
         fetchCreditsSuccess: (state, { payload: credits }) => {
             state.status = "success";
-            state.credits = [credits];
+            state.credits = credits;
         },
         fetchError: (state) => {
             state.status = "error";
