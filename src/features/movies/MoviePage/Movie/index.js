@@ -6,14 +6,21 @@ import {
 } from "../movieDetailsSlice";
 import MovieTile from "./components/MovieTile";
 import Backdrop from "./components/Backdrop";
-import MovieCast from "./components/MovieCast";
-import MovieCrew from "./components/MovieCrew";
-
-
+import {
+    HeaderMoviePeople,
+    ContainerMoviePeople,
+    PersonLink,
+    PersonName,
+    PersonInfo,
+    PersonImage,
+} from "../../../../common/Credits/styled";
+import { MainWrapper } from "../../../../common/MainWrapper";
 
 const MoviePageDetails = () => {
     const movie = useSelector(selectMovieDetails);
     const credits = useSelector(selectMovieCredits);
+    const cast = credits.cast;
+    const crew = credits.crew;
 
     return (
         <>
@@ -37,25 +44,48 @@ const MoviePageDetails = () => {
                     description={movie.overview}
                 />
             )}
-
-            {credits.cast && credits.cast.map((actor) => (
-                < MovieCast
-                    key={actor.credit_id}
-                    path={actor.profile_path}
-                    name={actor.original_name}
-                    role={actor.character}
-                    id={actor.id}
-                />
-            ))}
-            {credits.crew > 0 && credits.crew.map((member) => (
-                <MovieCrew
-                    key={member.credit_id}
-                    path={member.profile_path}
-                    name={member.original_name}
-                    role={member.job}
-                    id={member.id}
-                />
-            ))} 
+            {cast.length > 0 && (
+                <MainWrapper>
+                    <HeaderMoviePeople>Cast</HeaderMoviePeople>
+                    <ContainerMoviePeople>
+                        {cast.map((actor) =>
+                            <PersonLink key={actor.id}
+                            >
+                                {actor.profile_path && (
+                                    <PersonImage src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`} alt="" />
+                                )}
+                                {actor.name && (
+                                    <PersonName>{actor.name}</PersonName>
+                                )}
+                                {actor.character && (
+                                    <PersonInfo>{actor.character}</PersonInfo>
+                                )}
+                            </PersonLink>
+                        )}
+                    </ContainerMoviePeople>
+                </MainWrapper>
+            )}
+            {crew.length > 0 && (
+                <MainWrapper>
+                    <HeaderMoviePeople>Crew</HeaderMoviePeople>
+                    <ContainerMoviePeople>
+                        {crew.map((member) =>
+                            <PersonLink key={member.id}
+                            >
+                                {member.profile_path && (
+                                    <PersonImage src={`https://image.tmdb.org/t/p/w500/${member.profile_path}`} alt="" />
+                                )}
+                                {member.name && (
+                                    <PersonName>{member.name}</PersonName>
+                                )}
+                                {member.department && (
+                                    <PersonInfo>{member.department}</PersonInfo>
+                                )}
+                            </PersonLink>
+                        )}
+                    </ContainerMoviePeople>
+                </MainWrapper>
+            )}
         </>
     );
 };
