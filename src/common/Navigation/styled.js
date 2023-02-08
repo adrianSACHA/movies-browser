@@ -29,13 +29,12 @@ export const Wrapper = styled.div`
     /* margin: 0; */
     /* gap: 5px; */
     margin-bottom: 16px;
-
   }
 `;
 
 export const StyledLink = styled(Link)`
-text-decoration: none;
-color: ${({ theme }) => theme.colors.white};
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.white};
 `;
 
 export const Logo = styled.div`
