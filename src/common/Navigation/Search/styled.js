@@ -22,10 +22,8 @@ export const MainSearch = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.mystic};
   height: 48px;
 
-
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     height: 44px;
-
   }
 `;
 
@@ -50,12 +48,11 @@ export const StyledInput = styled.input`
   border: none;
   outline: 0;
   width: 70%;
-  background-color: transparent ;
+  background-color: transparent;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     max-height: 44px;
     width: 100%;
     font-size: 13px;
-
   }
 `;
