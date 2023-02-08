@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { ReactComponent as star } from "./images/Star.svg";
-import noImage from "./images/camera.svg"
+import noImage from "./images/camera.svg";
 
 export const MoviesListWrapper = styled.section`
   display: grid;
@@ -61,10 +61,28 @@ export const MovieWrapper = styled.div`
   }
 `;
 
+export const ImageWrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  flex-basis: auto;
+  background-image: url(${noImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+  background-color: ${({ theme }) => theme.colors.silver};
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    height: fit-content;
+  }
+`;
+
 export const Image = styled.img`
   width: 100%;
-  height: auto;
   border-radius: 5px;
+  aspect-ratio: 2/3;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     display: grid;
@@ -82,30 +100,11 @@ export const Image = styled.img`
     height: fit-content;
   }
 `;
-  
-  export const ImageWrapper = styled.div`
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    border-radius: 5px;
-    background-image: url(${noImage});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 30%;
-    background-color: ${({ theme }) => theme.colors.silver};
-    color: ${({ theme }) => theme.colors.white};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
-      height: fit-content;
-    }
-    
-`;
 
 export const RatingWrapper = styled.div`
   display: flex;
   align-items: center;
   margin-top: 8px;
-  
 `;
 
 export const Star = styled(star)`
@@ -129,7 +128,6 @@ export const Rate = styled.span`
     font-size: 13px;
     margin: 0 12px 0 10px;
   }
-
 `;
 
 export const Votes = styled.span`
@@ -139,7 +137,7 @@ export const Votes = styled.span`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-size: 13px;
   }
-  
+
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
     font-size: 12px;
   }
@@ -209,4 +207,3 @@ export const Tag = styled.div`
   text-align: center;
   color: ${({ theme }) => theme.colors.woodsmoke};
 `;
-
