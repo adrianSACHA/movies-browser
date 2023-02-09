@@ -15,7 +15,6 @@ export const Wrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
     width: fit-content;
   }
-
 `;
 
 export const MainSearch = styled.div`
@@ -30,14 +29,12 @@ export const MainSearch = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     height: 44px;
     width: 80%;
-    /* gap: 8px; */
+    gap: 8px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
     width: fit-content;
   }
-
-
 `;
 
 export const Loop = styled(Search)`
