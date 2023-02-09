@@ -8,7 +8,7 @@ export const Wrapper = styled.div`
   margin-bottom: 40px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    margin: 30px 12px;
+    margin: 30px 8px;
   }
 `;
 
@@ -19,9 +19,9 @@ export const CounterBox = styled.div`
   font-size: 16px;
   line-height: 150%;
   color: ${({ theme }) => theme.colors.waterloo};
-  margin: 0px 16px;
+  margin: 0px 12px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     font-size: 10px;
     margin: 0px 6px;
   }
