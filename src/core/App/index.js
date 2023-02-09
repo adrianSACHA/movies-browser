@@ -15,7 +15,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <HashRouter >
+      <HashRouter>
         <Navigation />
         <Routes>
           <Route path={toPopularMovies} element={<PopularMovies />} />
