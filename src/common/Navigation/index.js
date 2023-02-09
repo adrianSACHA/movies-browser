@@ -8,20 +8,23 @@ import {
   Wrapper,
   MenuItemLink,
   StyledLink,
+  MainWrapper,
 } from "./styled";
 
 export const Navigation = () => (
-  <Wrapper>
-    <StyledLink to="/">
-      <Logo>
-        <Icon>Icon</Icon>
-        <Text>Movies Browser</Text>
-      </Logo>
-    </StyledLink>
-    <Menu>
-      <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
-      <MenuItemLink to={"/people"}>People</MenuItemLink>
-    </Menu>
-    <Search />
-  </Wrapper>
+  <MainWrapper>
+    <Wrapper>
+      <StyledLink to="/">
+        <Logo>
+          <Icon />
+          <Text>Movies Browser</Text>
+        </Logo>
+      </StyledLink>
+      <Menu>
+        <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
+        <MenuItemLink to={"/people"}>People</MenuItemLink>
+      </Menu>
+      <Search />
+    </Wrapper>
+  </MainWrapper>
 );
