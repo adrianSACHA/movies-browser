@@ -1,6 +1,6 @@
-const toPopularMovies = "/popularmovies";
-const toMoviePage = "/movie/:id";
+const toPopularMovies = "/movies";
+const toMoviePage = "/movies/movie/:id";
 const toPeople = "/people";
-const toPerson = "/person/:id";
+const toPerson = "/people/person/:id";
 
 export { toPopularMovies, toMoviePage, toPeople, toPerson };
