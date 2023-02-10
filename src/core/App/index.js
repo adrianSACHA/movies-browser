@@ -8,7 +8,7 @@ import { toPopularMovies, toMoviePage, toPeople, toPerson } from "./routes";
 import PopularMovies from "../../features/movies/MovieList/PopularMovies";
 import MoviePage from "../../features/movies/MoviePage";
 import PeopleList from "../../features/people/PeopleList";
-import Person from "../../features/people/Person";
+import PersonPage from "../../features/people/PersonPage";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
           <Route path={toPopularMovies} element={<PopularMovies />} />
           <Route path={toMoviePage} element={<MoviePage />} />
           <Route path={toPeople} element={<PeopleList />} />
-          <Route path={toPerson} element={<Person />} />
+          <Route path={toPerson} element={<PersonPage />} />
 
           <Route
             path="/"
