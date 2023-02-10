@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "f3629256565164ca85c5",
-    "url": "/movies-browser/static/js/main.f3629256.chunk.js"
+    "revision": "760393693a46dba03c07",
+    "url": "/movies-browser/static/js/main.76039369.chunk.js"
   },
   {
-    "revision": "dcf916b92703013e6b2e",
-    "url": "/movies-browser/static/js/1.dcf916b9.chunk.js"
+    "revision": "575592be2d3e253bb90c",
+    "url": "/movies-browser/static/js/1.575592be.chunk.js"
   },
   {
-    "revision": "01d251e575888b9b8c38",
-    "url": "/movies-browser/static/js/2.01d251e5.chunk.js"
+    "revision": "8620de4376a05155d44b",
+    "url": "/movies-browser/static/js/2.8620de43.chunk.js"
   },
   {
-    "revision": "787bc0ed8dea3f4883a1",
-    "url": "/movies-browser/static/js/runtime~main.787bc0ed.js"
+    "revision": "315640c21b11580ac526",
+    "url": "/movies-browser/static/js/runtime~main.315640c2.js"
   },
   {
     "revision": "21d235fab6ef00f1862b2f9929afcb61",
@@ -22,6 +22,10 @@ self.__precacheManifest = [
   {
     "revision": "b83283c4d495a90cc2f7ff4dcfe16fb0",
     "url": "/movies-browser/static/media/camera.b83283c4.svg"
+  },
+  {
+    "revision": "d2fc5677108930285dfd748e5391aded",
+    "url": "/movies-browser/static/media/noPoster.d2fc5677.svg"
   },
   {
     "revision": "a76c887030ab0add24bdbae51de0f94d",
@@ -64,7 +68,7 @@ self.__precacheManifest = [
     "url": "/movies-browser/static/media/Star.bdf3dbc7.svg"
   },
   {
-    "revision": "6b1dd7d437bc1228d078a2f4b382aa6f",
+    "revision": "708e2775e5570b12a331bbd574de360d",
     "url": "/movies-browser/index.html"
   }
 ];
