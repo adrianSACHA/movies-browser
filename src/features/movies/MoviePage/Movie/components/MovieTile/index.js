@@ -21,12 +21,17 @@ import {
     StyledStar,
     MetaWrapper,
 } from "./styled";
+import poster from "./icons/noPoster.svg";
 
 const MovieTile = ({ poster_path, title, release, production, genres, rate, votes, description }) => (
 
     <TileWrapper>
         <MovieTileContainer>
-            <Image src={`${imgBaseUrl}/original/${poster_path}`} />
+            {poster_path ? (
+                <Image src={`${imgBaseUrl}/original/${poster_path}`} />
+                ) : (
+                    <Image src={poster} />
+                )}
             <Content>
                 <Title>{title}</Title>
                 <SubTitle>{release.slice(0, 4)}</SubTitle>
@@ -34,11 +39,19 @@ const MovieTile = ({ poster_path, title, release, production, genres, rate, vote
                     {production && (
                         <MetaContainer>
                             <MetaLabel>Production:</MetaLabel>
-                            {production.map((country, index, countries) =>
+                            {production.map((country, index) =>
                                 <Fragment key={index}>
                                     <MetaInfo key={country.name}>
                                         {country.name}
-
+                                        {production.length > 0 ? (
+                                            index < production.length - 1 ? (
+                                                <span>,&nbsp;</span>
+                                            ) : (
+                                                ""
+                                            )
+                                        ) : (
+                                            ""
+                                        )}
                                     </MetaInfo>
                                 </Fragment>
                             )}
