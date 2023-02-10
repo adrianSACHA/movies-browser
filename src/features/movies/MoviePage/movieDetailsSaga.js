@@ -5,12 +5,10 @@ import {
     fetchCredits,
     fetchCreditsSuccess,
     fetchMovieDetails,
-    fetchMovieDetailsError,
     fetchMovieDetailsSuccess,
+    fetchError,
     selectMovieId,
 } from "./movieDetailsSlice";
-
-
 
 function* fetchMovieDetailsHandler() {
     try {
@@ -20,7 +18,7 @@ function* fetchMovieDetailsHandler() {
         yield put(fetchMovieDetailsSuccess(movieDetails));
         yield put(fetchCredits());
     } catch (error) {
-        yield put(fetchMovieDetailsError());
+        yield put(fetchError());
     }
 }
 
@@ -31,7 +29,7 @@ function* fetchCreditsHandler() {
         const credits = yield call(getCredits, id);
         yield put(fetchCreditsSuccess(credits));
     } catch (error) {
-        yield put(fetchMovieDetailsError());
+        yield put(fetchError());
     }
 }
 
