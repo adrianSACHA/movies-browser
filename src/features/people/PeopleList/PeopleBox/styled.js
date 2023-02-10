@@ -56,10 +56,46 @@ export const PersonWrapper = styled.div`
 
 `;
 
+export const ImageBackground= styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  flex-basis: auto;
+  background-image: url(${noImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+  background-color: ${({ theme }) => theme.colors.silver};
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    height: fit-content;
+  }
+`;
+
 export const Image = styled.img`
   width: 100%;
   height: auto;
   border-radius: 5px;
   padding: 16px;
   aspect-ratio: 2/3;
+`;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const Name = styled.p`
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: ${({ theme }) => theme.colors.waterloo};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}) {
+    font-size: 13px;
+  }
 `;

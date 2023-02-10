@@ -4,9 +4,12 @@ import {
   PersonWrapper,
   LinkToPersonPage,
   Image,
+  Description,
+  ImageBackground,
+  Name
 } from "./styled";
 
-const PeopleBox = ({ page, query, people }) => (
+const PeopleBox = ({ people }) => (
   <PeopleListWrapper>
     {people.map((person) => (
     <LinkToPersonPage
@@ -16,16 +19,16 @@ const PeopleBox = ({ page, query, people }) => (
 
       <PersonWrapper>
         <ImageBackground>
-          {path ? (
-            <Image src={`https://image.tmdb.org/t/p/w500/${path}`} 
+          {person.profile_path ? (
+            <Image src={`https://image.tmdb.org/t/p/w500/${person.profile_path}`} 
             />
           ) : (
             <Image />
           )}
         </ImageBackground>
         <Description>
-          <Name>{name}</Name>
-          <Role>{role}</Role>
+          <Name>{person.name}</Name>
+          
         </Description>
         
       </PersonWrapper>
