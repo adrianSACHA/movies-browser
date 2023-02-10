@@ -1,7 +1,7 @@
 import { call, delay, put, select, takeLatest } from "redux-saga/effects";
 import {
   getPeople,
-  getPeopleByQuery,
+  getPeopleByQuery
 } from "../../../common/catchApi/apiDownload";
 import { loadingDelay } from "../../../common/states/loadingDelay";
 import {
@@ -19,6 +19,7 @@ function* fetchPeopleHandler() {
 
     const page = yield select(selectPage);
     const query = yield select(selectQuery);
+    
     const people = yield !query
       ? call(getPeople, page)
       : call(getPeopleByQuery, query, page);
@@ -28,6 +29,6 @@ function* fetchPeopleHandler() {
   }
 }
 
-export function* peopleSaga() {
+export function* peopleListSaga() {
   yield takeLatest([fetchPeople.type, setPage.type], fetchPeopleHandler);
 }
