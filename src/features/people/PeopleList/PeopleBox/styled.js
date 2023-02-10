@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import noImage from "./images/profile.svg";
 
 export const PeopleListWrapper = styled.section`
   display: grid;
@@ -60,4 +61,5 @@ export const Image = styled.img`
   height: auto;
   border-radius: 5px;
   padding: 16px;
+  aspect-ratio: 2/3;
 `;
