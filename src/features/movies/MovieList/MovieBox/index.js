@@ -57,7 +57,6 @@ const MovieBox = ({ genres, movies }) => (
             ) : (
               ""
             )}
-
             {movie.vote_average > 0 && (
               <RatingWrapper>
                 <Star />
