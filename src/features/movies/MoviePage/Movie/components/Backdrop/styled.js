@@ -21,7 +21,15 @@ export const Pleksa = styled.div`
     position: absolute;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 3vw 2.5vw ${({ theme }) => theme.colors.blakc};
+    box-shadow: inset 0 0 4vw 3.7vw ${({ theme }) => theme.colors.black};
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.desktop}px) {
+        box-shadow: inset 0 0 6vw 5.5vw ${({ theme }) => theme.colors.black};
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        box-shadow: inset 0 0 7vw 6.5vw ${({ theme }) => theme.colors.black};
+    }
 `;
 
 export const BackdropImage = styled.img`
@@ -36,6 +44,7 @@ export const BackdropInfoContainer = styled.div`
     flex-direction: column;
     position: absolute;
     color: ${({ theme }) => theme.colors.white};
+    text-shadow: 1px 1px 2px ${({ theme }) => theme.colors.mineShaft};
     
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
             padding-left: 16px;
