@@ -7,8 +7,8 @@ import { Navigation } from "../../common/Navigation";
 import { toPopularMovies, toMoviePage, toPeople, toPerson } from "./routes";
 import PopularMovies from "../../features/movies/MovieList/PopularMovies";
 import MoviePage from "../../features/movies/MoviePage";
-import PeopleList from "../../features/people/PeopleList";
-import PersonPage from "../../features/people/PersonPage";
+import PopularPeople from "../../features/people/PeopleList/PopularPeople";
+import Person from "../../features/people/Person";
 
 
 function App() {
@@ -20,8 +20,8 @@ function App() {
         <Routes>
           <Route path={toPopularMovies} element={<PopularMovies />} />
           <Route path={toMoviePage} element={<MoviePage />} />
-          <Route path={toPeople} element={<PeopleList />} />
-          <Route path={toPerson} element={<PersonPage />} />
+          <Route path={toPeople} element={<PopularPeople />} />
+          <Route path={toPerson} element={<Person />} />
 
           <Route
             path="/"

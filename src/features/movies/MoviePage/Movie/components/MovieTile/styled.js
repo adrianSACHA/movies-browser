@@ -88,7 +88,12 @@ export const MetaWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        gap: 4px;
+    }
 `;
+
 export const MetaContainer = styled.div`
 `;
 
@@ -211,4 +216,3 @@ export const Description = styled.p`
         grid-column: span 2;
     }
 `;
-
