@@ -1,12 +1,12 @@
 {
-  "main.js": "/movies-browser/static/js/main.c8602f74.chunk.js",
-  "main.js.map": "/movies-browser/static/js/main.c8602f74.chunk.js.map",
-  "static/js/1.575592be.chunk.js": "/movies-browser/static/js/1.575592be.chunk.js",
-  "static/js/1.575592be.chunk.js.map": "/movies-browser/static/js/1.575592be.chunk.js.map",
-  "static/js/2.98aff11b.chunk.js": "/movies-browser/static/js/2.98aff11b.chunk.js",
-  "static/js/2.98aff11b.chunk.js.map": "/movies-browser/static/js/2.98aff11b.chunk.js.map",
-  "runtime~main.js": "/movies-browser/static/js/runtime~main.315640c2.js",
-  "runtime~main.js.map": "/movies-browser/static/js/runtime~main.315640c2.js.map",
+  "main.js": "/movies-browser/static/js/main.4e50dbaa.chunk.js",
+  "main.js.map": "/movies-browser/static/js/main.4e50dbaa.chunk.js.map",
+  "static/js/1.32ab41aa.chunk.js": "/movies-browser/static/js/1.32ab41aa.chunk.js",
+  "static/js/1.32ab41aa.chunk.js.map": "/movies-browser/static/js/1.32ab41aa.chunk.js.map",
+  "static/js/2.1161bd76.chunk.js": "/movies-browser/static/js/2.1161bd76.chunk.js",
+  "static/js/2.1161bd76.chunk.js.map": "/movies-browser/static/js/2.1161bd76.chunk.js.map",
+  "runtime~main.js": "/movies-browser/static/js/runtime~main.acf6e7b8.js",
+  "runtime~main.js.map": "/movies-browser/static/js/runtime~main.acf6e7b8.js.map",
   "static/media/Picture.svg": "/movies-browser/static/media/Picture.21d235fa.svg",
   "static/media/camera.svg": "/movies-browser/static/media/camera.b83283c4.svg",
   "static/media/noPoster.svg": "/movies-browser/static/media/noPoster.d2fc5677.svg",
@@ -21,6 +21,6 @@
   "static/media/nextArrow.698ca656.svg": "/movies-browser/static/media/nextArrow.698ca656.svg",
   "static/media/Star.bdf3dbc7.svg": "/movies-browser/static/media/Star.bdf3dbc7.svg",
   "index.html": "/movies-browser/index.html",
-  "precache-manifest.bbf5947143b2a956b453f3a390850bf7.js": "/movies-browser/precache-manifest.bbf5947143b2a956b453f3a390850bf7.js",
+  "precache-manifest.c1542146a117472417d5173436aeee85.js": "/movies-browser/precache-manifest.c1542146a117472417d5173436aeee85.js",
   "service-worker.js": "/movies-browser/service-worker.js"
 }
