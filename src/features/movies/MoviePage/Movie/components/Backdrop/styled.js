@@ -44,7 +44,7 @@ export const BackdropInfoContainer = styled.div`
     flex-direction: column;
     position: absolute;
     color: ${({ theme }) => theme.colors.white};
-    text-shadow: 0 0 10px ${({ theme }) => theme.colors.mineShaft};
+    text-shadow: 1px 1px 2px ${({ theme }) => theme.colors.mineShaft};
     
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
             padding-left: 16px;
