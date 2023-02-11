@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as Star } from "./icons/Star.svg";
 
 export const TileWrapper = styled.div`
     display: flex;
@@ -112,7 +111,7 @@ export const MetaInfo = styled.span`
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
-    margin: 0;
+    margin: 24px 0 0 0;
     ;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
