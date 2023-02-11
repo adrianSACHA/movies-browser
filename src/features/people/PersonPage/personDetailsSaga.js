@@ -32,7 +32,7 @@ function* fetchPersonCreditsHandler() {
     }
 }
 
-export function* movieDetailsSaga() {
+export function* personDetailsSaga() {
     yield takeLatest(fetchPersonDetails.type, fetchPersonDetailsHandler);
     yield takeLatest(fetchPersonCredits.type, fetchPersonCreditsHandler);
 }
