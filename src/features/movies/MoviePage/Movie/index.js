@@ -28,7 +28,7 @@ const MoviePageDetails = () => {
             {movie.backdrop_path && (
                 <Backdrop
                     backdrop_path={movie.backdrop_path}
-                    title={movie.original_title}
+                    title={movie.title}
                     rate={movie.vote_average}
                     votes={movie.vote_count}
                 />
@@ -36,7 +36,7 @@ const MoviePageDetails = () => {
             {movie.poster_path && (
                 <MovieTile
                     poster_path={movie.poster_path}
-                    title={movie.original_title}
+                    title={movie.title}
                     release={movie.release_date}
                     production={movie.production_countries}
                     genres={movie.genres}

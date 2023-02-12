@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { ReactComponent as Star } from "./icons/Star.svg";
 
 export const TileWrapper = styled.div`
     display: flex;
@@ -72,18 +71,6 @@ export const Title = styled.header`
     }
 `;
 
-export const SubTitle = styled.div`
-    font-weight: 400;
-    font-size: 22px;
-    line-height: 1.2;
-    color: ${({ theme }) => theme.colors.black};
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        font-size: 13px;
-        line-height: 1.3;
-        color: ${({ theme }) => theme.colors.waterloo};
-    }
-`;
 export const MetaWrapper = styled.div`
     display: flex;
     flex-direction: column;
@@ -121,83 +108,10 @@ export const MetaInfo = styled.span`
     }
 `;
 
-export const Tags = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding-left: 0;
-    margin: 8px -8px 0 -8px;
-    
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        margin: 0 -8px 0 -8px;
-    }
-`;
-
-export const Tag = styled.li`
-    background: ${({ theme }) => theme.colors.mystic};
-    padding: 8px 16px;
-    font-size: 14px;
-    margin: 8px;
-    border-radius: 5px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        font-size: 10px;
-        padding: 4px 8px;
-        margin: 4px;
-    }
-`;
-
-export const Rating = styled.div`
-    display: flex;
-    align-items: center;
-`;
-
-export const StyledStar = styled(Star)`
-    width: clamp(16px, 2vw, 24px);
-    height: auto;
-`;
-
-export const RateBig = styled.span`
-    font-weight: 500;
-    font-size: 22px;
-    line-height: 1.3;
-    margin:0 8px;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        font-size: 13px;
-    }
-`;
-
-export const RateSmall = styled.span`
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.2;
-    margin-right: 12px;
-    padding-bottom: 3px;
-    align-self: flex-end;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        display: none;
-    }
-`;
-
-export const Votes = styled.span`
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 120%;
-    padding-bottom: 3px;
-    align-self: flex-end;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        font-size: 13px;
-        padding: 0;
-    }
-`;
-
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
-    margin: 0;
+    margin: 24px 0 0 0;
     ;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
