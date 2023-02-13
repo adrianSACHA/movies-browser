@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import { useSelector } from "react-redux";
 import {
     selectPeople,
@@ -12,7 +12,6 @@ import PeopleBox from "../../PeopleBox";
 import { NoResults } from "../../../../../common/states/NoResults";
 import { Footer } from "../../../../../common/Footer";
 
-
 const People = () => {
     const query = useQueryParameter(searchQueryParamName);
     const totalPages = useSelector(selectTotalPages);
@@ -23,14 +22,13 @@ const People = () => {
         <NoResults />
     ) : (
         <>
-          <MainWrapper>
-            <Title title={ !query ? "Popular People" : `Search result for "${query}" (${totalResults})`} />
-              <PeopleBox people={people} /> 
-          </MainWrapper>
-          <Footer totalPages={totalPages} />
+            <MainWrapper>
+                <Title title={!query ? "Popular People" : `Search result for "${query}" (${totalResults})`} />
+                <PeopleBox people={people} />
+            </MainWrapper>
+            <Footer totalPages={totalPages} />
         </>
     );
 };
-
 
 export default People;
