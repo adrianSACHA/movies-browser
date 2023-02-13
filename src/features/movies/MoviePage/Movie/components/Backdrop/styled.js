@@ -69,11 +69,11 @@ export const Rating = styled.div`
     grid-gap: 17px 8px;
     align-items: end;
 
-        @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-            display: flex;
-            align-items: center;
-            margin: 0 8px 0 0;
-        }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        display: flex;
+        align-items: center;
+        margin: 0 8px 0 0;
+    }
 `;
 
 export const StarIcon = styled(Star)`

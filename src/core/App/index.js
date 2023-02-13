@@ -12,25 +12,24 @@ import PersonPage from "../../features/people/PersonPage";
 
 
 function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyle />
-      <HashRouter>
-        <Navigation />
-        <Routes>
-          <Route path={toPopularMovies} element={<PopularMovies />} />
-          <Route path={toMoviePage} element={<MoviePage />} />
-          <Route path={toPeople} element={<PopularPeople />} />
-          <Route path={toPerson} element={<PersonPage />} />
-
-          <Route
-            path="/"
-            element={<Navigate replace to={toPopularMovies} />}
-          />
-        </Routes>
-      </HashRouter>
-    </ThemeProvider>
-  );
+    return (
+        <ThemeProvider theme={theme}>
+            <GlobalStyle />
+            <HashRouter>
+                <Navigation />
+                <Routes>
+                    <Route path={toPopularMovies} element={<PopularMovies />} />
+                    <Route path={toMoviePage} element={<MoviePage />} />
+                    <Route path={toPeople} element={<PopularPeople />} />
+                    <Route path={toPerson} element={<PersonPage />} />
+                    <Route
+                        path="/"
+                        element={<Navigate replace to={toPopularMovies} />}
+                    />
+                </Routes>
+            </HashRouter>
+        </ThemeProvider>
+    );
 }
 
 export default App;

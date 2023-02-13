@@ -29,9 +29,9 @@ const MovieTile = ({ poster_path, title, release, production, genres, rate, vote
         <MovieTileContainer>
             {poster_path ? (
                 <Image src={`${imgBaseUrl}/original/${poster_path}`} />
-                ) : (
-                    <Image src={poster} />
-                )}
+            ) : (
+                <Image src={poster} />
+            )}
             <Content>
                 <Title>{title}</Title>
                 <SubTitle>{release.slice(0, 4)}</SubTitle>

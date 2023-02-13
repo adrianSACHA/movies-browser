@@ -200,7 +200,6 @@ export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
     margin: 0;
-    ;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
         grid-column: span 2;

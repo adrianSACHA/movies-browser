@@ -6,7 +6,7 @@ export const MainWrapper = styled.div`
     padding: 0 16px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    padding: 0 12px;
-    margin: 0;
-  }
+        padding: 0 12px;
+        margin: 0;
+    }
 `;

@@ -15,7 +15,6 @@ import {
 import poster from "../../../../../common/images/noProfile.svg";
 
 const MovieTile = ({ poster_path, title, birthday, place, description }) => (
-
     <TileWrapper>
         <MovieTileContainer>
             {poster_path ? (

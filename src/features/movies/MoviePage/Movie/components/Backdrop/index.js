@@ -14,14 +14,14 @@ import {
     LongTitle,
 } from "./styled";
 
-const Backdrop = ({ title, backdrop_path, rate, votes}) => {
+const Backdrop = ({ title, backdrop_path, rate, votes }) => {
     return (
         <>
-        <BackdropWrapper >
-            <BackdropContainer>
-                <Pleksa />
-                <BackdropImage src={`${imgBackdrop}${backdrop_path}`}
-              alt={`poster of ${title}`}/>
+            <BackdropWrapper >
+                <BackdropContainer>
+                    <Pleksa />
+                    <BackdropImage src={`${imgBackdrop}${backdrop_path}`}
+                        alt={`poster of ${title}`} />
                     <BackdropInfoContainer>
                         <LongTitle>{title}</LongTitle>
                         <Rating>

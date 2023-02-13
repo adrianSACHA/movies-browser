@@ -6,7 +6,7 @@ import { peopleListSaga } from "../features/people/PeopleList/peopleListSaga";
 
 export default function* saga() {
     yield all([
-        movieListSaga(), 
+        movieListSaga(),
         movieDetailsSaga(),
         peopleListSaga(),
         personDetailsSaga(),
