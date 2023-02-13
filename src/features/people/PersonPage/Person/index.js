@@ -17,23 +17,23 @@ const PersonPageDetails = () => {
 
     return (
         <>
-                <PersonTile
-                    poster_path={person.profile_path}
-                    title={person.name}
-                    birthday={person.birthday}
-                    place={person.place_of_birth}
-                    description={person.biography}
-                />
+            <PersonTile
+                poster_path={person.profile_path}
+                title={person.name}
+                birthday={person.birthday}
+                place={person.place_of_birth}
+                description={person.biography}
+            />
             {cast.length > 0 && (
                 <MainWrapper>
                     <Title title={`Movies - cast (${cast.length})`} />
-                        <MovieBox movies={cast} />
+                    <MovieBox movies={cast} />
                 </MainWrapper>
             )}
             {crew.length > 0 && (
                 <MainWrapper>
                     <Title title={`Movies - crew (${crew.length})`} />
-                            <MovieBox movies={crew} />
+                    <MovieBox movies={crew} />
                 </MainWrapper>
             )}
         </>
