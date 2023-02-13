@@ -6,8 +6,8 @@ import {
 } from "../personDetailsSlice";
 import BigTile from "../../../../common/components/BigTile/index";
 import { Title } from "../../../../common/components/Title";
-import { MainWrapper } from "../../../../common/MainWrapper";
-import MovieBox from "../../../movies/MovieList/MovieBox";
+import { MainWrapper } from "../../../../common/components/MainWrapper";
+import MovieBox from "../../../../common/components/MovieBox/index";
 
 const PersonPageDetails = () => {
     const person = useSelector(selectPersonDetails);

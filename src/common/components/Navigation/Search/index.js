@@ -4,14 +4,14 @@ import {
     searchQueryParamName,
     useQueryParameter,
     useReplaceQueryParameter,
-} from "../../Query/queryParameters";
+} from "../../../Query/queryParameters";
 import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
 import {
     toPopularMovies,
     toMoviePage,
     toPeople,
     toPerson,
-} from "../../../core/App/routes";
+} from "../../../../core/App/routes";
 
 export const Search = () => {
     const location = useLocation();

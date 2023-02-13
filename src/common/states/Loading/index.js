@@ -1,6 +1,6 @@
 import React from "react";
 import { StyledSpinner, Wrapper } from "./styled";
-import { Title } from "../../Title";
+import { Title } from "../../components/Title";
 
 export const Loading = () => (
     <Wrapper>

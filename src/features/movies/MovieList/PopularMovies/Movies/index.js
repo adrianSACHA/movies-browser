@@ -14,7 +14,7 @@ import { Title } from "../../../../../common/components/Title";
 import { MainWrapper } from "../../../../../common/components/MainWrapper";
 import MovieBox from "../../../../../common/components/MovieBox";
 import { NoResults } from "../../../../../common/states/NoResults";
-import { Footer } from "../../../../../common/Footer";
+import { Footer } from "../../../../../common/components/Footer/index";
 
 const Movies = () => {
     const query = useQueryParameter(searchQueryParamName);
