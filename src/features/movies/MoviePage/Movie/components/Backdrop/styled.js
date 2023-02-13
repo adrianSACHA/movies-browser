@@ -30,6 +30,10 @@ export const Pleksa = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         box-shadow: inset 0 0 7vw 6.5vw ${({ theme }) => theme.colors.black};
     }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+        box-shadow: inset 0 0 7vw 2.5vw ${({ theme }) => theme.colors.black};
+    }
 `;
 
 export const BackdropImage = styled.img`
