@@ -34,11 +34,12 @@ export const PersonLink = styled.div`
     width: 100%;
     height: auto;
     background: white;
-    padding: 15px;
+    padding: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
+    border-radius: 5px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         padding: 8px;
@@ -49,6 +50,7 @@ export const PersonLink = styled.div`
 export const PersonImage = styled.img`    
     width: 100%;
     height: auto;
+    border-radius: 5px;
 `;
 
 export const PersonName = styled.p`

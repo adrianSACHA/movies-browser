@@ -5,7 +5,6 @@ import { Title } from "../../Title";
 export const Loading = () => (
   <Wrapper>
     <Title>Loading...</Title>
-    Please wait, project are&nbsp;being&nbsp;loaded...
-    <StyledSpinner />
+      <StyledSpinner />
   </Wrapper>
 );
