@@ -11,6 +11,7 @@ import {
   PersonImage,
   PersonWrapper,
   LinkToPersonPage,
+  PersonBackground,
 } from "../../../../common/Credits/styled";
 import { MainWrapper } from "../../../../common/MainWrapper";
 import picture from "../../../../common/Credits/Picture.svg";
@@ -53,14 +54,16 @@ const MoviePageDetails = () => {
                 to={`/people/person/${actor.id}`}
               >
                 <PersonWrapper>
-                  {actor.profile_path ? (
-                    <PersonImage
-                      src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
-                      alt=""
-                    />
-                  ) : (
-                    <PersonImage src={picture} alt="" />
-                  )}
+                  <PersonBackground>
+                    {actor.profile_path ? (
+                      <PersonImage
+                        src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
+                        alt=""
+                      />
+                    ) : (
+                      <PersonImage />
+                    )}
+                  </PersonBackground>
                   {actor.name && <PersonName>{actor.name}</PersonName>}
                   {actor.character && (
                     <PersonInfo>{actor.character}</PersonInfo>
