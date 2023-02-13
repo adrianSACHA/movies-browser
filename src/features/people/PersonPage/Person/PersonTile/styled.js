@@ -41,6 +41,7 @@ export const Image = styled.img`
     width: 100%;
     height: auto;
     grid-row: span 2;
+    border-radius: 5px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         width: 114px;
