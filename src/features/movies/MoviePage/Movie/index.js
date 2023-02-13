@@ -4,17 +4,10 @@ import { selectMovieDetails, selectMovieCredits } from "../movieDetailsSlice";
 import MovieTile from "./components/MovieTile";
 import Backdrop from "./components/Backdrop";
 import {
-  HeaderMoviePeople,
-  ContainerMoviePeople,
-  PersonName,
-  PersonInfo,
-  PersonImage,
-  PersonWrapper,
-  LinkToPersonPage,
-  PersonBackground,
-  Description,
+  HeaderMoviePeople
 } from "../../../../common/components/Credits/styled";
 import { MainWrapper } from "../../../../common/components/MainWrapper";
+import PeopleBox from "../../../../common/components/PeopleBox";
 
 const MoviePageDetails = () => {
   const movie = useSelector(selectMovieDetails);
@@ -47,65 +40,13 @@ const MoviePageDetails = () => {
       {cast.length > 0 && (
         <MainWrapper>
           <HeaderMoviePeople>Cast</HeaderMoviePeople>
-          <ContainerMoviePeople>
-            {cast.map((actor) => (
-              <LinkToPersonPage
-                key={actor.id}
-                to={`/people/person/${actor.id}`}
-              >
-                <PersonWrapper>
-                  <PersonBackground>
-                    {actor.profile_path ? (
-                      <PersonImage
-                        src={`https://image.tmdb.org/t/p/w500/${actor.profile_path}`}
-                        alt=""
-                      />
-                    ) : (
-                      <PersonImage />
-                    )}
-                  </PersonBackground>
-                  <Description>
-                    {actor.name && <PersonName>{actor.name}</PersonName>}
-                    {actor.character && (
-                      <PersonInfo>{actor.character}</PersonInfo>
-                    )}
-                  </Description>
-                </PersonWrapper>
-              </LinkToPersonPage>
-            ))}
-          </ContainerMoviePeople>
+          <PeopleBox people={cast} />
         </MainWrapper>
       )}
       {crew.length > 0 && (
         <MainWrapper>
           <HeaderMoviePeople>Crew</HeaderMoviePeople>
-          <ContainerMoviePeople>
-            {crew.map((member) => (
-              <LinkToPersonPage
-                key={member.id}
-                to={`/people/person/${member.id}`}
-              >
-                <PersonWrapper>
-                  <PersonBackground>
-                    {member.profile_path ? (
-                      <PersonImage
-                        src={`https://image.tmdb.org/t/p/w500/${member.profile_path}`}
-                        alt=""
-                      />
-                    ) : (
-                      <PersonImage />
-                    )}
-                  </PersonBackground>
-                  <Description>
-                    {member.name && <PersonName>{member.name}</PersonName>}
-                    {member.department && (
-                      <PersonInfo>{member.department}</PersonInfo>
-                    )}
-                  </Description>
-                </PersonWrapper>
-              </LinkToPersonPage>
-            ))}
-          </ContainerMoviePeople>
+          <PeopleBox people={crew} />
         </MainWrapper>
       )}
     </>
