@@ -13,8 +13,8 @@ import {
   LinkToPersonPage,
   PersonBackground,
   Description,
-} from "../../../../common/Credits/styled";
-import { MainWrapper } from "../../../../common/MainWrapper";
+} from "../../../../common/components/Credits/styled";
+import { MainWrapper } from "../../../../common/components/MainWrapper";
 
 const MoviePageDetails = () => {
   const movie = useSelector(selectMovieDetails);
