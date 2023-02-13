@@ -12,12 +12,16 @@ export const StyledTitle = styled.h1`
     font-size: 30px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     font-size: 24px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    font-size: 20px;
   }
 
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
