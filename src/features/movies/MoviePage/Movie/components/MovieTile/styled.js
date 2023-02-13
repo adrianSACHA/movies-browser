@@ -40,6 +40,7 @@ export const MovieTileContainer = styled.div`
 
 export const Image = styled.img`    
     width: 100%;
+    border-radius: 5px;
     height: auto;
     grid-row: span 2;
 
@@ -84,6 +85,7 @@ export const SubTitle = styled.div`
         color: ${({ theme }) => theme.colors.waterloo};
     }
 `;
+
 export const MetaWrapper = styled.div`
     display: flex;
     flex-direction: column;

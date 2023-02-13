@@ -81,6 +81,7 @@ export const ImageWrapper = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+  height: auto;
   border-radius: 5px;
   aspect-ratio: 2/3;
 
