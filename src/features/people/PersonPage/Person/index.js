@@ -19,7 +19,6 @@ const PersonPageDetails = () => {
 
     return (
         <>
-            {person.profile_path && (
                 <PersonTile
                     poster_path={person.profile_path}
                     title={person.name}
@@ -27,7 +26,6 @@ const PersonPageDetails = () => {
                     place={person.place_of_birth}
                     description={person.biography}
                 />
-            )}
             {cast.length > 0 && (
                 <MainWrapper>
                     <HeaderMoviePeople>Movies - cast ({cast.length})</HeaderMoviePeople>
