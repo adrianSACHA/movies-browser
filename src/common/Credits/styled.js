@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import picture from "../Credits/Picture.svg";
 
 export const HeaderMoviePeople = styled.h2`
   font-weight: 600;
@@ -64,6 +65,24 @@ export const PersonWrapper = styled.div`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     padding: 8px;
+    height: 100%;
+  }
+`;
+
+export const PersonBackground = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  flex-basis: auto;
+  background-image: url(${picture});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  background-color: ${({ theme }) => theme.colors.silver};
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     height: fit-content;
   }
 `;
@@ -73,6 +92,10 @@ export const PersonImage = styled.img`
   height: auto;
   border-radius: 5px;
   aspect-ratio: 2/3;
+`;
+
+export const Description = styled.div`
+  text-align: center;
 `;
 
 export const PersonName = styled.p`
@@ -92,6 +115,7 @@ export const PersonInfo = styled.span`
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
+  text-align: center;
   color: ${({ theme }) => theme.colors.waterloo};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
