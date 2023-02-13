@@ -12,7 +12,7 @@ import {
     MetaInfo,
     MetaWrapper,
 } from "../../../../../common/components/BigTile/styled";
-import poster from "./picture.svg";
+import poster from "../../../../../common/images/noProfile.svg";
 
 const MovieTile = ({ poster_path, title, birthday, place, description }) => (
 
