@@ -4,12 +4,12 @@ import picture from "../Credits/Picture.svg";
 
 export const HeaderMoviePeople = styled.h2`
   font-weight: 600;
-  font-size: clamp(20px, 3vw, 36px);
+  font-size: clamp(20px, 4vw, 36px);
   line-height: 1.2;
   margin: 64px 0 32px 0;
   color: ${({ theme }) => theme.colors.black};
 
-    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
       margin: 21px 0 16px 0;
     }
 `;
