@@ -25,7 +25,7 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   height: 94px;
   gap: 19px;
-  margin: 0 15px 0 15px;
+  margin: 0 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     gap: 10px;
