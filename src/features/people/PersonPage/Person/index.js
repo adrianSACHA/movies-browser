@@ -5,9 +5,7 @@ import {
     selectPersonCredits,
 } from "../personDetailsSlice";
 import PersonTile from "./PersonTile";
-import {
-    HeaderMoviePeople,
-} from "../../../../common/Credits/styled";
+import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/MainWrapper";
 import MovieBox from "../../../movies/MovieList/MovieBox";
 
@@ -28,13 +26,13 @@ const PersonPageDetails = () => {
                 />
             {cast.length > 0 && (
                 <MainWrapper>
-                    <HeaderMoviePeople>Movies - cast ({cast.length})</HeaderMoviePeople>
+                    <Title title={`Movies - cast (${cast.length})`} />
                         <MovieBox movies={cast} />
                 </MainWrapper>
             )}
             {crew.length > 0 && (
                 <MainWrapper>
-                    <HeaderMoviePeople>Movies - crew ({crew.length})</HeaderMoviePeople>
+                    <Title title={`Movies - crew (${crew.length})`} />
                             <MovieBox movies={crew} />
                 </MainWrapper>
             )}
