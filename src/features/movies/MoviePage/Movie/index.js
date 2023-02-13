@@ -12,6 +12,7 @@ import {
   PersonWrapper,
   LinkToPersonPage,
   PersonBackground,
+  Description,
 } from "../../../../common/Credits/styled";
 import { MainWrapper } from "../../../../common/MainWrapper";
 import picture from "../../../../common/Credits/Picture.svg";
@@ -64,10 +65,12 @@ const MoviePageDetails = () => {
                       <PersonImage />
                     )}
                   </PersonBackground>
-                  {actor.name && <PersonName>{actor.name}</PersonName>}
-                  {actor.character && (
-                    <PersonInfo>{actor.character}</PersonInfo>
-                  )}
+                  <Description>
+                    {actor.name && <PersonName>{actor.name}</PersonName>}
+                    {actor.character && (
+                      <PersonInfo>{actor.character}</PersonInfo>
+                    )}
+                  </Description>
                 </PersonWrapper>
               </LinkToPersonPage>
             ))}
@@ -84,18 +87,22 @@ const MoviePageDetails = () => {
                 to={`/people/person/${member.id}`}
               >
                 <PersonWrapper>
-                  {member.profile_path ? (
-                    <PersonImage
-                      src={`https://image.tmdb.org/t/p/w500/${member.profile_path}`}
-                      alt=""
-                    />
-                  ) : (
-                    <PersonImage src={picture} alt="" />
-                  )}
-                  {member.name && <PersonName>{member.name}</PersonName>}
-                  {member.department && (
-                    <PersonInfo>{member.department}</PersonInfo>
-                  )}
+                  <PersonBackground>
+                    {member.profile_path ? (
+                      <PersonImage
+                        src={`https://image.tmdb.org/t/p/w500/${member.profile_path}`}
+                        alt=""
+                      />
+                    ) : (
+                      <PersonImage />
+                    )}
+                  </PersonBackground>
+                  <Description>
+                    {member.name && <PersonName>{member.name}</PersonName>}
+                    {member.department && (
+                      <PersonInfo>{member.department}</PersonInfo>
+                    )}
+                  </Description>
                 </PersonWrapper>
               </LinkToPersonPage>
             ))}
