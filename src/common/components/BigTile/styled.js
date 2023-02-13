@@ -199,7 +199,7 @@ export const Votes = styled.span`
 export const Description = styled.p`
     font-size: 20px;
     line-height: 1.6;
-    margin: 0;
+    margin: 40px 0 0 0;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
         grid-column: span 2;
