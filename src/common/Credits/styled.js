@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const HeaderMoviePeople = styled.h2`
@@ -30,16 +31,36 @@ export const ContainerMoviePeople = styled.ul`
   }
 `;
 
-export const PersonLink = styled.div`
+export const LinkToPersonPage = styled(Link)`
+  text-decoration: none;
+  margin: 0;
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 100%;
-    height: auto;
-    background: white;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-shadow: 0px 4px 12px rgba(186, 199, 213, 0.5);
-    border-radius: 5px;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+  }
+
+  &:active {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
+`;
+
+export const PersonWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  background: ${({ theme }) => theme.colors.white};
+  display: grid;
+  justify-items: center;
+  grid-template-rows: auto 1fr;
+  transition: 0.5s;
+  box-shadow: 0px 4px 12px rgba(186, 199, 213, 1);
+  border-radius: 5px;
+  padding: 16px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     padding: 8px;
@@ -59,7 +80,7 @@ export const PersonName = styled.p`
   font-size: 22px;
   line-height: 1.3;
   margin: 12px 0 8px 0;
-  color: #18181b;
+  color: ${({ theme }) => theme.colors.woodsmoke};
   text-align: center;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
@@ -71,7 +92,7 @@ export const PersonInfo = styled.span`
   font-weight: 400;
   font-size: 18px;
   line-height: 1.5;
-  color: #7e839a;
+  color: ${({ theme }) => theme.colors.waterloo};
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     font-size: 13px;
