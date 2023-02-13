@@ -20,8 +20,8 @@ import {
     MetaInfo,
     StyledStar,
     MetaWrapper,
-} from "./styled";
-import poster from "./icons/noPoster.svg";
+} from "../../../../../../common/components/BigTile/styled";
+import poster from "../../../../../../common/images/noPoster.svg";
 
 const MovieTile = ({ poster_path, title, release, production, genres, rate, votes, description }) => (
 
