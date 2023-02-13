@@ -4,7 +4,7 @@ import {
     selectPersonDetails,
     selectPersonCredits,
 } from "../personDetailsSlice";
-import PersonTile from "./PersonTile";
+import BigTile from "../../../../common/components/BigTile/index";
 import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/MainWrapper";
 import MovieBox from "../../../movies/MovieList/MovieBox";
@@ -17,7 +17,7 @@ const PersonPageDetails = () => {
 
     return (
         <>
-            <PersonTile
+            <BigTile
                 poster_path={person.profile_path}
                 title={person.name}
                 birthday={person.birthday}

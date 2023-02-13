@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { selectMovieDetails, selectMovieCredits } from "../movieDetailsSlice";
-import MovieTile from "./components/MovieTile";
+import BigTile from "../../../../common/components/BigTile/index";
 import Backdrop from "./components/Backdrop";
 import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/components/MainWrapper";
@@ -24,7 +24,7 @@ const MoviePageDetails = () => {
                 />
             )}
             {movie.poster_path && (
-                <MovieTile
+                <BigTile
                     poster_path={movie.poster_path}
                     title={movie.title}
                     release={movie.release_date}
