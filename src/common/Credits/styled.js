@@ -34,6 +34,7 @@ export const PersonLink = styled.div`
     width: 100%;
     height: auto;
     background: white;
+    border-radius: 5px;
     padding: 15px;
     display: flex;
     flex-direction: column;
@@ -42,13 +43,15 @@ export const PersonLink = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         padding: 8px;
-        border-radius: 5px;
+        height: fit-content;
     }
 `;
 
 export const PersonImage = styled.img`    
     width: 100%;
     height: auto;
+    border-radius: 5px;
+  aspect-ratio: 2/3;
 `;
 
 export const PersonName = styled.p`
