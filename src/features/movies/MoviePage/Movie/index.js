@@ -15,7 +15,6 @@ import {
   Description,
 } from "../../../../common/Credits/styled";
 import { MainWrapper } from "../../../../common/MainWrapper";
-import picture from "../../../../common/Credits/Picture.svg";
 
 const MoviePageDetails = () => {
   const movie = useSelector(selectMovieDetails);
