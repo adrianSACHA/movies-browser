@@ -10,9 +10,9 @@ import {
   useQueryParameter,
   searchQueryParamName,
 } from "../../../../../common/Query/queryParameters";
-import { Title } from "../../../../../common/Title";
-import { MainWrapper } from "../../../../../common/MainWrapper";
-import MovieBox from "../../MovieBox";
+import { Title } from "../../../../../common/components/Title";
+import { MainWrapper } from "../../../../../common/components/MainWrapper";
+import MovieBox from "../../../../../common/components/MovieBox";
 import { NoResults } from "../../../../../common/states/NoResults";
 import { Footer } from "../../../../../common/Footer";
 
