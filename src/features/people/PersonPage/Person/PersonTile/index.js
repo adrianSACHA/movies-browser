@@ -11,7 +11,7 @@ import {
     MetaLabel,
     MetaInfo,
     MetaWrapper,
-} from "./styled";
+} from "../../../../../common/components/BigTile/styled";
 import poster from "./picture.svg";
 
 const MovieTile = ({ poster_path, title, birthday, place, description }) => (
