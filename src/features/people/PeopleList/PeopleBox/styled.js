@@ -27,15 +27,16 @@ export const LinkToPersonPage = styled(Link)`
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     width: 100%;
   }
-    &:hover {
-        transform: scale(1.03);
-        transition: 0.5s;
-    }
-    &:active {
-        transform: scale(1.05);
-        transition: 0.5s;
-    }
+  &:hover {
+    transform: scale(1.03);
+    transition: 0.5s;
+  }
+  &:active {
+    transform: scale(1.05);
+    transition: 0.5s;
+  }
 `;
+
 export const PersonWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -56,10 +57,9 @@ export const PersonWrapper = styled.div`
     box-shadow: ${({ theme }) => theme.activeShadow};
     transform: scale(1.05);
   }
-
 `;
 
-export const ImageBackground= styled.div`
+export const ImageBackground = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
