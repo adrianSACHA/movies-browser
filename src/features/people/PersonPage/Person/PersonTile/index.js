@@ -29,9 +29,9 @@ const MovieTile = ({ poster_path, title, birthday, place, description }) => (
                     {birthday && (
                         <MetaContainer>
                             <MetaLabel>Date of birth:</MetaLabel>
-                                    <MetaInfo>
-                                        {birthday}
-                                    </MetaInfo>
+                            <MetaInfo>
+                                {birthday}
+                            </MetaInfo>
                         </MetaContainer>
                     )}
                     {place && (
@@ -42,7 +42,9 @@ const MovieTile = ({ poster_path, title, birthday, place, description }) => (
                     )}
                 </MetaWrapper>
             </Content>
-            <Description>{description}</Description>
+            {description && (
+                <Description>{description}</Description>
+            )}
         </MovieTileContainer>
     </TileWrapper>
 );
