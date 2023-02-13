@@ -68,6 +68,24 @@ export const PersonWrapper = styled.div`
   }
 `;
 
+export const PersonBackground = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 5px;
+  flex-basis: auto;
+  background-image: url(${noImage});
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30%;
+  background-color: ${({ theme }) => theme.colors.silver};
+  color: ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    height: fit-content;
+  }
+`;
+
 export const PersonImage = styled.img`
   width: 100%;
   height: auto;
