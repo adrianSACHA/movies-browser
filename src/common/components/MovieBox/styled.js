@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { ReactComponent as star } from "./images/Star.svg";
-import noImage from "./images/camera.svg";
+import { ReactComponent as star } from "../../icons/star.svg";
+import noImage from "../../images/noPoster.svg";
 
 export const MoviesListWrapper = styled.section`
   display: grid;
