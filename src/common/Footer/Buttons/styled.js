@@ -17,7 +17,7 @@ export const StyledButton = styled.button`
 
   &:hover {
     filter: brightness(105%);
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   &:disabled {
