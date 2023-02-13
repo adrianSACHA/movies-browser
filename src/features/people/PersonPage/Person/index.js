@@ -4,10 +4,8 @@ import {
     selectPersonDetails,
     selectPersonCredits,
 } from "../personDetailsSlice";
-import PersonTile from "./PersonTile";
-import {
-    HeaderMoviePeople,
-} from "../../../../common/Credits/styled";
+import BigTile from "../../../../common/components/BigTile/index";
+import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/MainWrapper";
 import MovieBox from "../../../movies/MovieList/MovieBox";
 
@@ -19,25 +17,23 @@ const PersonPageDetails = () => {
 
     return (
         <>
-            {person.profile_path && (
-                <PersonTile
-                    poster_path={person.profile_path}
-                    title={person.name}
-                    birthday={person.birthday}
-                    place={person.place_of_birth}
-                    description={person.biography}
-                />
-            )}
+            <BigTile
+                poster_path={person.profile_path}
+                title={person.name}
+                birthday={person.birthday}
+                place={person.place_of_birth}
+                description={person.biography}
+            />
             {cast.length > 0 && (
                 <MainWrapper>
-                    <HeaderMoviePeople>Movies - cast ({cast.length})</HeaderMoviePeople>
-                        <MovieBox movies={cast} />
+                    <Title title={`Movies - cast (${cast.length})`} />
+                    <MovieBox movies={cast} />
                 </MainWrapper>
             )}
             {crew.length > 0 && (
                 <MainWrapper>
-                    <HeaderMoviePeople>Movies - crew ({crew.length})</HeaderMoviePeople>
-                            <MovieBox movies={crew} />
+                    <Title title={`Movies - crew (${crew.length})`} />
+                    <MovieBox movies={crew} />
                 </MainWrapper>
             )}
         </>

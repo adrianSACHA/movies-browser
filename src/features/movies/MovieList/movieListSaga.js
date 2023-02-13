@@ -12,38 +12,38 @@ import {
     selectQuery,
     setPage,
     isQuery,
-  } from "./movieListSlice";
-  
-  function* fetchMoviesHandler() {
+} from "./movieListSlice";
+
+function* fetchMoviesHandler() {
     try {
-      yield delay(loadingDelay);
-  
-      yield put(fetchGenres());
-      const page = yield select(selectPage);
-      const query = yield select(selectQuery);
-  
-      const movies = yield !query
-        ? call(getMovies, page)
-        : call(getMoviesByQuery, query, page);
-      yield put(fetchMoviesSuccess(movies));
+        yield delay(loadingDelay);
+
+        yield put(fetchGenres());
+        const page = yield select(selectPage);
+        const query = yield select(selectQuery);
+
+        const movies = yield !query
+            ? call(getMovies, page)
+            : call(getMoviesByQuery, query, page);
+        yield put(fetchMoviesSuccess(movies));
     } catch (error) {
-      yield put(fetchMoviesError());
+        yield put(fetchMoviesError());
     }
-  }
-  
-  function* fetchGenresHandler() {
+}
+
+function* fetchGenresHandler() {
     try {
-      const genres = yield call(getGenres);
-      yield put(fetchGenresSuccess(genres.genres));
+        const genres = yield call(getGenres);
+        yield put(fetchGenresSuccess(genres.genres));
     } catch (error) {
-      yield put(fetchGenresError());
+        yield put(fetchGenresError());
     }
-  }
-  
-  export function* movieListSaga() {
+}
+
+export function* movieListSaga() {
     yield takeLatest(fetchGenres.type, fetchGenresHandler);
     yield takeLatest(
-      [fetchMovies.type, isQuery.type, setPage.type],
-      fetchMoviesHandler
+        [fetchMovies.type, isQuery.type, setPage.type],
+        fetchMoviesHandler
     );
-  }
+}

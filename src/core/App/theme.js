@@ -23,7 +23,7 @@ export const theme = {
         large: 1081,
         desktop: 1224,
         widest: 1440,
-      },
+    },
 
     boxShadow: "0px 4px 12px rgba(186, 199, 213, 0,5)",
     hoverShadow: "0px 4px 12px rgba(11, 106, 194, 0.65);",
