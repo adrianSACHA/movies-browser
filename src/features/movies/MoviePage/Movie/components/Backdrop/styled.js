@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Star } from "./images/Star.svg";
+import { ReactComponent as Star } from "../../../../../../common/icons/star.svg";
 
 export const BackdropWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.black};
