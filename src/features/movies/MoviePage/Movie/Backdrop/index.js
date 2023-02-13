@@ -1,5 +1,5 @@
 import React from "react";
-import { imgBackdrop } from "../../../../../../common/catchApi/apiValue";
+import { imgBackdrop } from "../../../../../common/catchApi/apiValue";
 import {
     BackdropContainer,
     Pleksa,

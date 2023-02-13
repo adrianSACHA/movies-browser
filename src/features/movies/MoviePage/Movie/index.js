@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { selectMovieDetails, selectMovieCredits } from "../movieDetailsSlice";
 import BigTile from "../../../../common/components/BigTile/index";
-import Backdrop from "./components/Backdrop";
+import Backdrop from "./Backdrop/index";
 import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/components/MainWrapper";
 import PeopleBox from "../../../../common/components/PeopleBox";
