@@ -3,14 +3,14 @@ import styled from "styled-components";
 
 export const HeaderMoviePeople = styled.h2`
   font-weight: 600;
-  font-size: 36px;
+  font-size: clamp(20px, 3vw, 36px);
   line-height: 1.2;
   margin: 64px 0 32px 0;
   color: ${({ theme }) => theme.colors.black};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-    margin: 21px 16px;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+      margin: 21px 0 16px 0;
+    }
 `;
 
 export const ContainerMoviePeople = styled.ul`
@@ -21,33 +21,34 @@ export const ContainerMoviePeople = styled.ul`
   grid-template-columns: repeat(auto-fill, minmax(208px, 1fr));
   grid-gap: 24px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.tabletHorizontalMax}px) {
-    margin: 0 16px;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.medium}px) {
+      margin: 0 16px;
+    }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
-    grid-gap: 16px;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      grid-template-columns: repeat(auto-fill, minmax(136px, 1fr));
+      grid-gap: 16px;
+    }
 `;
 
 export const LinkToPersonPage = styled(Link)`
   text-decoration: none;
   margin: 0;
+  transition: 0.5s;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    width: 100%;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      width: 100%;
+    }
 
-  &:hover {
-    transform: scale(1.03);
-    transition: 0.5s;
-  }
+    &:hover {
+      box-shadow: ${({ theme }) => theme.hoverShadow};
+      transform: scale(1.03);
+    }
 
-  &:active {
-    transform: scale(1.05);
-    transition: 0.5s;
-  }
+    &:active {
+      box-shadow: ${({ theme }) => theme.hoverShadow};
+      transform: scale(1.05);
+    }
 `;
 
 export const PersonWrapper = styled.div`
@@ -62,10 +63,10 @@ export const PersonWrapper = styled.div`
   border-radius: 5px;
   padding: 16px;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    padding: 8px;
-    height: fit-content;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      padding: 8px;
+      height: fit-content;
+    }
 `;
 
 export const PersonImage = styled.img`
@@ -83,9 +84,9 @@ export const PersonName = styled.p`
   color: ${({ theme }) => theme.colors.woodsmoke};
   text-align: center;
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 14px;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      font-size: 14px;
+    }
 `;
 
 export const PersonInfo = styled.span`
@@ -94,7 +95,7 @@ export const PersonInfo = styled.span`
   line-height: 1.5;
   color: ${({ theme }) => theme.colors.waterloo};
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-    font-size: 13px;
-  }
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+      font-size: 13px;
+    }
 `;
