@@ -13,9 +13,11 @@ export const StyledButton = styled.button`
   flex-direction: row;
   align-items: center;
   gap: 8px;
+  transition: 0.3s;
 
   &:hover {
-    filter: brightness(96%);
+    filter: brightness(105%);
+    transform: scale(1.1);
   }
 
   &:disabled {

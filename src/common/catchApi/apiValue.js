@@ -3,4 +3,3 @@ export const apiBaseUrl = "https://api.themoviedb.org/3";
 export const language = "&language=en-US";
 export const imgBaseUrl = "https://image.tmdb.org/t/p";
 export const imgBackdrop = "https://image.tmdb.org/t/p/original";
-
