@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import noImage from "./images/profile.svg";
+import noImage from "../../images/noProfile.svg";
 
 export const PeopleListWrapper = styled.section`
   display: grid;
