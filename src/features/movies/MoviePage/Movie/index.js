@@ -3,9 +3,7 @@ import { useSelector } from "react-redux";
 import { selectMovieDetails, selectMovieCredits } from "../movieDetailsSlice";
 import MovieTile from "./components/MovieTile";
 import Backdrop from "./components/Backdrop";
-import {
-  HeaderMoviePeople
-} from "../../../../common/components/Credits/styled";
+import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/components/MainWrapper";
 import PeopleBox from "../../../../common/components/PeopleBox";
 
@@ -39,13 +37,13 @@ const MoviePageDetails = () => {
       )}
       {cast.length > 0 && (
         <MainWrapper>
-          <HeaderMoviePeople>Cast</HeaderMoviePeople>
+          <Title title={"Cast"} />
           <PeopleBox people={cast} />
         </MainWrapper>
       )}
       {crew.length > 0 && (
         <MainWrapper>
-          <HeaderMoviePeople>Crew</HeaderMoviePeople>
+          <Title title={"Crew"} />
           <PeopleBox people={crew} />
         </MainWrapper>
       )}
