@@ -24,7 +24,6 @@ import {
 import poster from "../../images/noPoster.svg";
 import profile from "../../images/noProfile.svg"
 
-
 const BigTile = ({ profile_path, poster_path, title, release, birthday, place, production, genres, rate, votes, description }) => (
 
     <TileWrapper>
