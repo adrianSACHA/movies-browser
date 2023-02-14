@@ -23,7 +23,7 @@ const MoviePageDetails = () => {
                     votes={movie.vote_count}
                 />
             )}
-            {movie.poster_path && (
+            {movie.title && (
                 <BigTile
                     poster_path={movie.poster_path}
                     title={movie.title}
