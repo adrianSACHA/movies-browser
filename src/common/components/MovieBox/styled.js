@@ -71,7 +71,7 @@ export const ImageWrapper = styled.div`
     background-image: url(${noImage});
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 30%;
+    background-size: 80%;
     background-color: ${({ theme }) => theme.colors.silver};
     color: ${({ theme }) => theme.colors.white};
 

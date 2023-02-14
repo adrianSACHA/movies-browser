@@ -8,7 +8,10 @@ import {
 import { useQueryParameter, searchQueryParamName } from "../../../../../common/Query/queryParameters";
 import { Title } from "../../../../../common/components/Title";
 import { MainWrapper } from "../../../../../common/components/MainWrapper";
-import PeopleBox from "../../../../../common/components/PeopleBox/index";
+
+
+import PeopleBox from "../../../../../common/components/PeopleBox";
+
 import { NoResults } from "../../../../../common/states/NoResults";
 import { Footer } from "../../../../../common/components/Footer";
 
