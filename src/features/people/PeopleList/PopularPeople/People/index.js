@@ -6,11 +6,11 @@ import {
     selectTotalPages
 } from "../../peopleListSlice";
 import { useQueryParameter, searchQueryParamName } from "../../../../../common/Query/queryParameters";
-import { Title } from "../../../../../common/Title";
-import { MainWrapper } from "../../../../../common/MainWrapper";
-import PeopleBox from "../../PeopleBox";
+import { Title } from "../../../../../common/components/Title";
+import { MainWrapper } from "../../../../../common/components/MainWrapper";
+import PeopleBox from "../../../../../common/components/PeopleBox";
 import { NoResults } from "../../../../../common/states/NoResults";
-import { Footer } from "../../../../../common/Footer";
+import { Footer } from "../../../../../common/components/Footer";
 
 const People = () => {
     const query = useQueryParameter(searchQueryParamName);

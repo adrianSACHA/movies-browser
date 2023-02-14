@@ -2,7 +2,7 @@ import React from "react";
 import {
     useQueryParameter,
     useReplaceQueryParameter,
-} from "../Query/queryParameters";
+} from "../../Query/queryParameters";
 import { ButtonPrev, ButtonNext } from "./Buttons";
 import { CounterBox, Wrapper, Span } from "./styled";
 
