@@ -1,7 +1,7 @@
 # Movies Browser - Group Project
 
 ## Contributors:
-- Konrad Kapica(Rudolfini)
+- Konrad Kapica(konradkapica)
 - Radosław Bubienko(RadekBubienko)
 - Adrian Sachajdakiewicz(adrianSACHA)
 
@@ -11,7 +11,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Table of content
 1. Demo
-1. Preview
 1. Description
 1. Technologies
 1. Getting started
@@ -19,23 +18,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## DEMO
 [Application Demo](https://adriansacha.github.io/movies-browser/)
 
-## PREVIEW
-N/A
-
 ## Description
-Building this site in Group Project according to a project in Figma.
+Building this site in Group Project according to a project designed in Figma. Working in Scrum.
 
 ## Technologies used in project
+- `React`
+- `Redux(toolkit)`
+- `Redux-Saga`
+- `React-Router`
+- `JS/ES6+`
 - `HTML`
-- `BEM`
 - `CSS`
+- `BEM`
 - `Flex/Grid`
 - `Transition`
 - `Media query`
-- `JS/ES6+`
-- `React`
 - `Styled Components`
 - `GlobalStyles & Theme`
+- `API`
 
 ## Available Scripts
 In the project directory, you can run:
