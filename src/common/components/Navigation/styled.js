@@ -16,26 +16,26 @@ export const MainWrapper = styled.div`
 `;
 
 export const Wrapper = styled.div`
-         width: ${({ theme }) => theme.breakpoints.desktop}px;
-         background: ${({ theme }) => theme.colors.black}px;
-         color: ${({ theme }) => theme.colors.white};
-         display: flex;
-         flex-wrap: wrap;
-         align-items: center;
-         justify-content: space-between;
-         height: 94px;
-         gap: 19px;
-         margin: 0 16px;
-         transition: all;
+  width: ${({ theme }) => theme.breakpoints.desktop}px;
+  background: ${({ theme }) => theme.colors.black}px;
+  color: ${({ theme }) => theme.colors.white};
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  height: 94px;
+  gap: 19px;
+  margin: 0 16px;
+  transition: all;
 
-         @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-           gap: 10px;
-         }
+  @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    gap: 10px;
+  }
 
-         @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-           justify-content: center;
-         }
-       `;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+    justify-content: center;
+  }
+`;
 
 export const StyledLink = styled(Link)`
   text-decoration: none;
@@ -47,12 +47,18 @@ export const Logo = styled.div`
   align-items: center;
   justify-content: center;
   gap: 17px;
-  max-width: 300px;
+  max-width: 100%;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    gap: 10px;
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     gap: 5px;
-    max-width: 110px;
-    height: 40px;
+    max-width: 100%;
+    height: auto;
   }
 `;
 
@@ -63,6 +69,11 @@ export const Icon = styled(Video)`
   transition: 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    height: 30px;
+    width: 30px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     height: 17px;
     width: 17px;
   }
@@ -72,13 +83,19 @@ export const Text = styled.p`
   width: 168px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 40px;
+  line-height: 1.4;
   letter-spacing: -1.5px;
   text-transform: capitalize;
   text-align: left;
   transition: 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
+    font-weight: 500;
+    font-size: 18px;
+    width: 100px;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
     font-weight: 500;
     font-size: 13px;
     width: fit-content;
