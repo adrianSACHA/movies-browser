@@ -19,6 +19,7 @@ const peopleListSlice = createSlice({
             state.people = people.results;
             state.totalPages = people.total_pages;
             state.totalResults = people.total_results;
+            state.query = null;
         },
         fetchPeopleError: (state) => {
             state.status = "error";
