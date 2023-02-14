@@ -17,6 +17,7 @@ export const theme = {
         mobileTiny: 349,
         mobileMin: 467,
         mobileMed: 524,
+        mobileMedium: 536,
         mobileMax: 767,
         tablet: 811,
         medium: 991,
