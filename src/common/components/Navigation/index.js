@@ -12,19 +12,19 @@ import {
 } from "./styled";
 
 export const Navigation = () => (
-    <MainWrapper>
-        <Wrapper>
-            <StyledLink to="/">
-                <Logo>
-                    <Icon />
-                    <Text>Movies Browser</Text>
-                </Logo>
-            </StyledLink>
-            <Menu>
-                <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
-                <MenuItemLink to={"/people"}>People</MenuItemLink>
-            </Menu>
-            <Search />
-        </Wrapper>
-    </MainWrapper>
-);
+         <MainWrapper>
+           <Wrapper>
+             <StyledLink to="/">
+               <Logo>
+                 <Icon />
+                 <Text>Movies&nbsp;Browser</Text>
+               </Logo>
+             </StyledLink>
+             <Menu>
+               <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
+               <MenuItemLink to={"/people"}>People</MenuItemLink>
+             </Menu>
+             <Search />
+           </Wrapper>
+         </MainWrapper>
+       );
