@@ -7,10 +7,7 @@ import {
 import BigTile from "../../../../common/components/BigTile/index";
 import { Title } from "../../../../common/components/Title";
 import { MainWrapper } from "../../../../common/components/MainWrapper";
-
-
 import MovieBox from "../../../../common/components/MovieBox";
-
 
 const PersonPageDetails = () => {
     const person = useSelector(selectPersonDetails);
