@@ -1,27 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "9a062225c2ed055069c1",
-    "url": "/movies-browser/static/js/main.9a062225.chunk.js"
+    "revision": "9c26ae23513c8dfb5f6b",
+    "url": "/movies-browser/static/js/main.9c26ae23.chunk.js"
   },
   {
-    "revision": "32ab41aa145553738579",
-    "url": "/movies-browser/static/js/1.32ab41aa.chunk.js"
+    "revision": "ed197c0f677114f68a6f",
+    "url": "/movies-browser/static/js/1.ed197c0f.chunk.js"
   },
   {
-    "revision": "0692056d35f01cbf7c77",
-    "url": "/movies-browser/static/js/2.0692056d.chunk.js"
+    "revision": "7af43493f252db32df12",
+    "url": "/movies-browser/static/js/2.7af43493.chunk.js"
   },
   {
-    "revision": "acf6e7b81e2fc671cc24",
-    "url": "/movies-browser/static/js/runtime~main.acf6e7b8.js"
-  },
-  {
-    "revision": "21d235fab6ef00f1862b2f9929afcb61",
-    "url": "/movies-browser/static/media/Picture.21d235fa.svg"
-  },
-  {
-    "revision": "b83283c4d495a90cc2f7ff4dcfe16fb0",
-    "url": "/movies-browser/static/media/camera.b83283c4.svg"
+    "revision": "4561a738234826ae5b10",
+    "url": "/movies-browser/static/js/runtime~main.4561a738.js"
   },
   {
     "revision": "d2fc5677108930285dfd748e5391aded",
@@ -29,11 +21,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "eeaab970136423e6bff7c033723fc61a",
-    "url": "/movies-browser/static/media/profile.eeaab970.svg"
-  },
-  {
-    "revision": "21d235fab6ef00f1862b2f9929afcb61",
-    "url": "/movies-browser/static/media/picture.21d235fa.svg"
+    "url": "/movies-browser/static/media/noProfile.eeaab970.svg"
   },
   {
     "revision": "56dd92fe52ec8fc3a08c48956b883f60",
@@ -53,7 +41,7 @@ self.__precacheManifest = [
   },
   {
     "revision": "01e4fceab2d60ea606631625788e227a",
-    "url": "/movies-browser/static/media/Star.01e4fcea.svg"
+    "url": "/movies-browser/static/media/star.01e4fcea.svg"
   },
   {
     "revision": "15978f48e108e7f70557deadc2efc0eb",
@@ -68,11 +56,7 @@ self.__precacheManifest = [
     "url": "/movies-browser/static/media/nextArrow.698ca656.svg"
   },
   {
-    "revision": "bdf3dbc7cb651fb019f90778bf62baa7",
-    "url": "/movies-browser/static/media/Star.bdf3dbc7.svg"
-  },
-  {
-    "revision": "8d9be8d10b37713d02417031c71c07e4",
+    "revision": "edab53c535fefe8fa86be5ad4da6016c",
     "url": "/movies-browser/index.html"
   }
 ];
