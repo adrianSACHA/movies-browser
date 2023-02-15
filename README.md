@@ -11,12 +11,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Table of content
 1. Demo
+1. Preview
 1. Description
 1. Technologies
 1. Getting started
 
 ## DEMO
 [Application Demo](https://adriansacha.github.io/movies-browser/)
+
+## PREVIEW
+[Application Preview](public/movieBrowserPreview.gif)
 
 ## Description
 Building this site in Group Project according to a project designed in Figma. Working in Scrum.
