@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { ReactComponent as Search } from "./Search.svg";
-import { DebounceInput } from "react-debounce-input"
+import { DebounceInput } from "react-debounce-input";
 
 export const Wrapper = styled.div`
     height: 48px;
