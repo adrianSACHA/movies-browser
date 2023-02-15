@@ -1,8 +1,7 @@
 
 import React from "react";
-import { PictureWrapper, Picture } from "./styled";
+import { Header, PictureWrapper, Picture } from "./styled";
 import { MainWrapper } from "../../components/MainWrapper";
-import { Title } from "../../components/Title/index";
 import { searchQueryParamName, useQueryParameter } from "../../Query/queryParameters";
 
 export const NoResults = () => {
@@ -10,7 +9,7 @@ export const NoResults = () => {
 
     return (
         <MainWrapper>
-            <Title title={`Sorry, there are no result for "${query}"`} />
+            <Header>{`Sorry, there are no results for "${query}"`}</Header>
             <PictureWrapper>
                 <Picture />
             </PictureWrapper>

@@ -1,6 +1,21 @@
 import styled from "styled-components";
 import { ReactComponent as noResultPicture } from "./noResultPicture.svg";
 
+export const Header = styled.header`
+    font-weight: 600;
+    font-size: 36px;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
+        text-align: center;
+        font-size: 24px;
+        margin-top: 36px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+        font-size: 18px;
+    }
+`;
+
 export const PictureWrapper = styled.div`
     display: grid;
     justify-items: center;
