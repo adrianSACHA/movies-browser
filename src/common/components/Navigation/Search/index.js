@@ -1,8 +1,9 @@
 import React from "react";
+import debouce from "lodash.debounce";
+import { useMemo, useEffect } from "react";
 import { Loop, MainSearch, StyledInput, Wrapper } from "./styled";
 import {
     searchQueryParamName,
-    useQueryParameter,
     useReplaceQueryParameter,
 } from "../../../Query/queryParameters";
 import { createSearchParams, useLocation, useNavigate } from "react-router-dom";
@@ -15,7 +16,6 @@ import {
 
 export const Search = () => {
     const location = useLocation();
-    const query = useQueryParameter(searchQueryParamName);
     const replaceQueryParameter = useReplaceQueryParameter();
     const navigate = useNavigate();
 
@@ -50,6 +50,16 @@ export const Search = () => {
         }
     };
 
+    const debouncedResults = useMemo(() => {
+        return debouce(onInputChange, 500);
+    }, []);
+
+    useEffect(() => {
+        return () => {
+            debouncedResults.cancel();
+        };
+    });
+
     return (
         <Wrapper>
             <MainSearch>
@@ -60,8 +70,8 @@ export const Search = () => {
                             ? "Search for people..."
                             : "Search for movies..."
                     }
-                    value={query || ""}
-                    onChange={onInputChange}
+                    type="text"
+                    onChange={debouncedResults}
                 />
             </MainSearch>
         </Wrapper>
