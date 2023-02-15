@@ -23,7 +23,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ![Application Preview](public/movieBrowserPreview.gif)
 
 ## Description
-Building this site in Group Project according to a project designed in Figma. Working in Scrum.
+Building this site in Group Project according to a project designed in Figma. Working in Scrum. API fetched from The Movie Data Base (TMDB).
 
 ## Technologies used in project
 - `React`
