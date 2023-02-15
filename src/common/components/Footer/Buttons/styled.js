@@ -23,7 +23,11 @@ export const StyledButton = styled.button`
     &:disabled {
         background-color: ${({ theme }) => theme.colors.mystic};
         color: ${({ theme }) => theme.colors.woodsmoke};
-        pointer-events: none;
+        transition: none;
+        filter: none;
+        transform: none;
+        cursor: not-allowed;
+        
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
