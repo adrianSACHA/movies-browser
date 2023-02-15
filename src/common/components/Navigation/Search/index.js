@@ -1,5 +1,5 @@
 import React from "react";
-import debouce from "lodash.debounce";
+import debounce from "lodash.debounce";
 import { useMemo, useEffect } from "react";
 import { Loop, MainSearch, StyledInput, Wrapper } from "./styled";
 import {
@@ -51,7 +51,7 @@ export const Search = () => {
     };
 
     const debouncedResults = useMemo(() => {
-        return debouce(onInputChange, 500);
+        return debounce(onInputChange, 500);
     }, []);
 
     useEffect(() => {
