@@ -9,9 +9,10 @@ export const MainWrapper = styled.div`
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: 94px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMedium}px) {
-    min-height: 142px;
+    height: 142px;
   }
 `;
 
@@ -23,17 +24,20 @@ export const Wrapper = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  height: 94px;
   gap: 19px;
   margin: 0 16px;
   transition: all;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-    gap: 10px;
+    gap: 12px;
+    margin: 0 12px;
   }
 
   @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
     justify-content: center;
+    margin: 0 8px;
+    gap: 10px;
+    height: auto;
   }
 `;
 
@@ -48,6 +52,7 @@ export const Logo = styled.div`
   justify-content: center;
   gap: 17px;
   max-width: 100%;
+  margin: 0;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     gap: 10px;
@@ -73,7 +78,7 @@ export const Icon = styled(Video)`
     width: 30px;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     height: 17px;
     width: 17px;
   }
@@ -83,22 +88,18 @@ export const Text = styled.p`
   width: 168px;
   font-weight: 500;
   font-size: 24px;
-  line-height: 1.4;
   letter-spacing: -1.5px;
   text-transform: capitalize;
   text-align: left;
   transition: 0.3s;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
-    font-weight: 500;
-    font-size: 18px;
-    width: 100px;
+    font-size: 19px;
+    width: fit-content;
   }
 
-  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
-    font-weight: 500;
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
     font-size: 13px;
-    width: fit-content;
   }
 `;
 
@@ -113,6 +114,7 @@ export const Menu = styled.nav`
   justify-content: center;
   align-items: center;
   text-align: center;
+  max-width: 400px;
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     display: inherit;
@@ -132,10 +134,9 @@ export const MenuItemLink = styled(NavLink)`
   color: ${({ theme }) => theme.colors.white};
   padding: 8px 24px;
   margin: -5px 0;
-  width: 105px;
+  width: fit-content;
   border-radius: 24px;
   border: 1px solid transparent;
-  max-width: 300px;
   transition: 0.3s;
 
   &:hover,
@@ -145,12 +146,17 @@ export const MenuItemLink = styled(NavLink)`
 
   @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     line-height: 18px;
-    width: 70px;
     padding: 8px 12px;
     width: fit-content;
-    border-radius: 24px;
     display: inherit;
+  }
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    width: fit-content;
   }
 `;
