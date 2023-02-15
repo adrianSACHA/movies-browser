@@ -1,6 +1,6 @@
 {
-  "main.js": "/movies-browser/static/js/main.04c37913.chunk.js",
-  "main.js.map": "/movies-browser/static/js/main.04c37913.chunk.js.map",
+  "main.js": "/movies-browser/static/js/main.b9eb8157.chunk.js",
+  "main.js.map": "/movies-browser/static/js/main.b9eb8157.chunk.js.map",
   "static/js/1.ed197c0f.chunk.js": "/movies-browser/static/js/1.ed197c0f.chunk.js",
   "static/js/1.ed197c0f.chunk.js.map": "/movies-browser/static/js/1.ed197c0f.chunk.js.map",
   "static/js/2.7af43493.chunk.js": "/movies-browser/static/js/2.7af43493.chunk.js",
@@ -18,6 +18,6 @@
   "static/media/prevArrow.233c07c2.svg": "/movies-browser/static/media/prevArrow.233c07c2.svg",
   "static/media/nextArrow.698ca656.svg": "/movies-browser/static/media/nextArrow.698ca656.svg",
   "index.html": "/movies-browser/index.html",
-  "precache-manifest.c4d48329110b47e2d0f001186a295928.js": "/movies-browser/precache-manifest.c4d48329110b47e2d0f001186a295928.js",
+  "precache-manifest.269cbc96b2557eabf82c30c9b01aaf5b.js": "/movies-browser/precache-manifest.269cbc96b2557eabf82c30c9b01aaf5b.js",
   "service-worker.js": "/movies-browser/service-worker.js"
 }
