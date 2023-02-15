@@ -7,10 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        flex-grow: 2;
-    }
+    flex-grow: 2;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
         width: fit-content;
@@ -26,7 +23,6 @@ export const MainSearch = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.mystic};
     height: 48px;
     width: 90%;
-    margin-right: 10px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         height: 44px;
