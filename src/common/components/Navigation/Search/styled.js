@@ -7,10 +7,7 @@ export const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-
-    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        flex-grow: 2;
-    }
+    flex-grow: 2;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
         width: fit-content;
@@ -25,15 +22,16 @@ export const MainSearch = styled.div`
     border-radius: 33px;
     border: 1px solid ${({ theme }) => theme.colors.mystic};
     height: 48px;
+    width: 90%;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         height: 44px;
-        width: 80%;
+        width: 90%;
         gap: 8px;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
-        width: fit-content;
+        width: 95%;
     }
 `;
 
@@ -43,6 +41,7 @@ export const Loop = styled(Search)`
     width: 24px;
     height: 24px;
     margin: 15px 0 15px 26px;
+    transition: 0.3s;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         width: 12px;
@@ -59,6 +58,7 @@ export const StyledInput = styled.input`
     outline: 0;
     width: 70%;
     background-color: transparent;
+    transition: 0.3s;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         max-height: 44px;

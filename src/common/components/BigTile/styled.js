@@ -21,6 +21,7 @@ export const MovieTileContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 2fr;
     grid-gap: 0 40px;
+    border-radius: 5px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.large}px) {
         grid-template-columns: 1fr 3fr;
