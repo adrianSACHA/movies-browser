@@ -29,6 +29,7 @@ export const Search = () => {
                             ? "Search for people..."
                             : "Search for movies..."
                     }
+                    debounceTimeout={400}
                     value={query || ""}
                     onChange={onInputChange}
                 />
