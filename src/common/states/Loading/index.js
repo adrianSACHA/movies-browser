@@ -8,7 +8,7 @@ export const Loading = () => {
 
     return (
     <Wrapper>
-        <Title title={!query ? "Loading..." : `Search result for "${query}"`} />
+        <Title title={!query ? "" : `Search results for "${query}"`} />
         <StyledSpinner />
     </Wrapper>
     );
