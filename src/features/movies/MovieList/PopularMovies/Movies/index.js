@@ -35,7 +35,7 @@ const Movies = () => {
                     title={
                         !query
                             ? "Popular Movies"
-                            : `Search result for "${query}" (${totalResults})`
+                            : `Search results for "${query}" (${totalResults})`
                     }
                 />
                 <MovieBox genres={genres} movies={movies} />
