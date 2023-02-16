@@ -5,6 +5,7 @@ export const StyledTitle = styled.h1`
     font-size: 36px;
     line-height: 1.2;
     color: ${({ theme }) => theme.colors.woodsmoke};
+    margin-left: 10px;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         font-size: 30px;
