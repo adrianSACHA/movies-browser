@@ -107,3 +107,20 @@ export const Name = styled.p`
         font-size: 16px;
     }
 `;
+
+export const Role = styled.p`
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: ${({ theme }) => theme.colors.waterloo};
+    margin: 16px 0 0 0;
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMed}px) {
+        font-size: 15px;
+    }
+
+    @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
+        margin: 12px 0 0 0;
+        font-size: 14px;
+    }
+`
