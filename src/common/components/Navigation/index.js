@@ -1,4 +1,5 @@
 import React from "react";
+import { toPeople, toPopularMovies } from "../../../core/App/routes";
 import { Search } from "./Search";
 import {
     Menu,
@@ -21,8 +22,8 @@ export const Navigation = () => (
                 </Logo>
             </StyledLink>
             <Menu>
-                <MenuItemLink to={"/movies"}>Movies</MenuItemLink>
-                <MenuItemLink to={"/people"}>People</MenuItemLink>
+                <MenuItemLink to={toPopularMovies}>Movies</MenuItemLink>
+                <MenuItemLink to={toPeople}>People</MenuItemLink>
             </Menu>
             <Search />
         </Wrapper>
