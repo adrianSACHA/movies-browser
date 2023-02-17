@@ -108,7 +108,7 @@ export const Name = styled.p`
     }
 `;
 
-export const Role = styled.p`
+export const Function = styled.p`
     font-size: 18px;
     font-weight: 400;
     line-height: 1.5;

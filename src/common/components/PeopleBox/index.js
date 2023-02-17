@@ -7,7 +7,7 @@ import {
     Description,
     ImageBackground,
     Name,
-    Role,
+    Function,
 } from "./styled";
 
 const PeopleBox = ({ people }) => (
@@ -30,7 +30,10 @@ const PeopleBox = ({ people }) => (
                     <Description>
                         <Name>{person.name}</Name>
                         {person.character && (
-                            <Role>{person.character}</Role>
+                            <Function>{person.character}</Function>
+                        )}
+                        {person.department && (
+                            <Function>{person.department}</Function>
                         )}
                     </Description>
                 </PersonWrapper>
