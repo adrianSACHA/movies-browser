@@ -8,7 +8,7 @@ const rotate = keyframes`
 `;
 
 export const Wrapper = styled.div`
-  margin: 14px 0px;
+  margin: 14px auto;
   padding-left: 16px;
   color: ${({ theme }) => theme.colors.textPrimary};
   display: grid;
