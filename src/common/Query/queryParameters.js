@@ -1,4 +1,5 @@
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useNavigate, useLocation, useSearchParams } from "react-router-dom";
+import { toPeople, toPopularMovies } from "../../core/App/routes";
 
 export const useQueryParameter = (key) => {
     const location = useLocation();
@@ -8,7 +9,9 @@ export const useQueryParameter = (key) => {
 };
 
 export const useReplaceQueryParameter = () => {
+    const location = useLocation();
     const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
 
     return ({ key, value }) => {
         if (value === undefined) {
@@ -17,6 +20,10 @@ export const useReplaceQueryParameter = () => {
             searchParams.set(key, value);
         };
         setSearchParams(searchParams);
+        navigate(location.pathname.includes("people")
+            ? `${toPeople}?${searchParams}`
+            : `${toPopularMovies}?${searchParams}`
+        );
     };
 };
 
