@@ -26,7 +26,7 @@ const People = () => {
     ) : (
         <>
             <MainWrapper>
-                <Title title={!query ? "Popular People" : `Search result for "${query}" (${totalResults})`} />
+                <Title title={!query ? "Popular People" : `Search results for "${query}" (${totalResults})`} />
                 <PeopleBox people={people} />
             </MainWrapper>
             <Footer totalPages={totalPages} />
