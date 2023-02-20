@@ -13,12 +13,12 @@ export const Wrapper = styled.div`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
-        width: fit-content;
+        width: 100%;
     }
 `;
 
 export const MainSearch = styled.div`
-    min-width: 320px;
+    min-width: 350px;
     display: flex;
     align-items: center;
     gap: 19px;
@@ -31,12 +31,12 @@ export const MainSearch = styled.div`
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
         min-width: auto;
         height: 44px;
-        width: 80%;
+        width: 100%;
         gap: 8px;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
-        width: fit-content;
+        width: 100%;
     }
 `;
 
@@ -60,7 +60,7 @@ export const StyledInput = styled(DebounceInput)`
     color: ${({ theme }) => theme.colors.waterloo};
     border: none;
     outline: 0;
-    width: 70%;
+    width: 100%;
     background-color: transparent;
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
