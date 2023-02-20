@@ -16,10 +16,10 @@ export const StyledTitle = styled.h1`
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMin}px) {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileTiny}px) {
-        font-size: 16px;
+        font-size: 20px;
     }
 `;
