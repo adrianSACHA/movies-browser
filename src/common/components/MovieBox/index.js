@@ -27,7 +27,7 @@ const MovieBox = ({ genres, movies }) => (
                     <ImageWrapper>
                         {movie.poster_path ? (
                             <Image
-                                src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+                                src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`}
                                 alt=""
                             />
                         ) : (
