@@ -30,12 +30,12 @@ export const Wrapper = styled.div`
 
     @media (max-width: ${({ theme }) => theme.breakpoints.tablet}px) {
         gap: 12px;
-        margin: 0 12px;
+        margin: 0 15px;
     }
 
     @media (max-width: ${({ theme }) => theme.breakpoints.mobileMax}px) {
-        justify-content: center;
-        margin: 0 8px;
+        justify-content: space-between;
+        margin: 0 12px;
         gap: 10px;
         height: auto;
     }
