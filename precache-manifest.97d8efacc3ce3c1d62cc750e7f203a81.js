@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
-    "revision": "7f2a78684015f6abafb2",
-    "url": "/movies-browser/static/js/main.7f2a7868.chunk.js"
+    "revision": "d4240e9cd31c2dc2d870",
+    "url": "/movies-browser/static/js/main.d4240e9c.chunk.js"
   },
   {
     "revision": "575592be2d3e253bb90c",
@@ -56,7 +56,7 @@ self.__precacheManifest = [
     "url": "/movies-browser/static/media/nextArrow.698ca656.svg"
   },
   {
-    "revision": "7cee095d64dee870858708a872745e61",
+    "revision": "c442df80e43af435ea64b1626ed0b6d0",
     "url": "/movies-browser/index.html"
   }
 ];
